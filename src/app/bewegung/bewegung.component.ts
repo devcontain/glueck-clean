@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { LanguageService } from '../shared/language.service';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-bewegung',
   standalone: true,
   imports: [],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  templateUrl: './bewegung.component.html',
+  styleUrl: './bewegung.component.scss'
 })
-export class MainComponent {
+export class BewegungComponent {
   constructor(public language: LanguageService) { }
 }

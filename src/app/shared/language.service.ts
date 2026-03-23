@@ -118,6 +118,27 @@ export class LanguageService {
     ]
   };
 
+  private readonly pricesDatesDe = {
+    titel: 'PREISE & TERMINE',
+    paragraphs: [
+      'Bewegung trifft Entspannung – „ZENbo Balance“.',
+      'Auch als Geschenkgutschein – auch für einzelne Stunden – erhältlich.',
+      'Termine in der Gruppe (max. 8 Teilnehmer*innen). Ein Einstieg ist jederzeit möglich. Die Kosten für einen 8-Wochen-Kurs liegen bei 85 €. Das Kurs-Ticket ist 9 Wochen gültig.',
+      'Montags: 18:00 - 19:00 Uhr – ausgebucht',
+      'Montags: 19:15 - 20:15 Uhr – noch 2 freie Plätze',
+      'Dienstags: 17:30 - 18:30 Uhr – ausgebucht',
+      'Mittwochs: 18:00 - 19:00 Uhr – ausgebucht',
+      'Eine Schnupperstunde ist nach vorheriger Absprache jederzeit möglich und kostet 5 € pro Person.',
+      'Gern biete ich auch Privattrainings an. Termine nach Absprache. Die Stunde kostet 60 € für maximal 3 Personen.',
+      'Wichtiger Hinweis',
+      'Mein Angebot kann nicht mit den Krankenkassen abgerechnet werden, da es außerhalb des gesetzlichen Leistungskataloges der Krankenkassen liegt.',
+      'Beratung',
+      '1. Ihre Anmeldung: Sie kontaktieren mich per Mail oder telefonisch und wir vereinbaren einen Termin für das Erstgespräch.',
+      '2. Ihr Erstgespräch: Ein kurzes, kostenfreies Erstgespräch erlaubt uns ein gegenseitiges Kennenlernen und ermöglicht mir, ein Gespür für Ihr Anliegen zu bekommen. Damit eine Beratung erfolgreich ist, ist es entscheidend, dass Sie sich gut aufgehoben fühlen. So können Sie über eine weitere Zusammenarbeit entscheiden und wir haben die Möglichkeit, konkrete Vereinbarungen zu treffen.',
+      '3. Ihr Folgetermin / Ihre Folgetermine (45 Minuten – 50 €): Sie haben sich für eine Beratung bei mir entschieden. Nun vereinbaren wir weitere Termine und schaffen damit eine Voraussetzung für eine konstruktive und zielorientierte Arbeit. Zu jeder Zeit gilt: Sie sind kein Patient, sondern bestimmen jederzeit selbst über Ihre Ziel- und Veränderungswünsche.'
+    ]
+  };
+
   get bewegung() {
     return this.toggleValue === 'false' ? this.bewegungDe : this.bewegungEn;
   }
@@ -136,6 +157,10 @@ export class LanguageService {
 
   get contact() {
     return this.toggleValue === 'false' ? this.contactDe : this.contactDe;
+  }
+
+  get pricesdate() {
+    return this.toggleValue === 'false' ? this.pricesDatesDe : this.pricesDatesDe;
   }
 
   toggleLanguage() {

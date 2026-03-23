@@ -1,0 +1,14 @@
+<section class="bewegung-section">
+    <div class="bewegung-content-positon">
+        <button type="button" (click)="language.toggleLanguage()">Change Language
+        </button>
+        <div class="bewegung-context">
+            <h1>{{ language.bewegung.titel }}</h1>
+            @for (paragraph of language.bewegung.paragraphs; track $index) {
+            <p class="bewegung-paragraph">
+                {{ paragraph }}
+            </p>
+            }
+        </div>
+    </div>
+</section>

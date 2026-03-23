@@ -1,0 +1,14 @@
+<section class="main-section">
+    <div class="main-content-positon">
+<!--         <button type="button" (click)="language.toggleLanguage()">Change Language
+        </button> -->
+        <div class="main-context">
+            <h1>{{ language.home.titel }}</h1>
+            @for (paragraph of language.home.paragraphs; track $index) {
+            <p class="home-paragraph">
+                {{ paragraph }}
+            </p>
+            }
+        </div>
+    </div>
+</section>

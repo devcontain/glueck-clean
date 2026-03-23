@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { LanguageService } from '../shared/language.service';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-contact',
   standalone: true,
   imports: [],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss'
 })
-export class MainComponent {
+export class ContactComponent {
   constructor(public language: LanguageService) { }
 }

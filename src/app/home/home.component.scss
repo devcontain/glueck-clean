@@ -1,5 +1,5 @@
 * {
-    background-color: #C8CCBD;
+    background-color: #be816e;
 }
 
 section.main-section {
@@ -10,22 +10,24 @@ section.main-section {
     height: 100vh;
 
     >div.main-content-positon {
-/*         height: 300px; */
+        /*         height: 300px; */
         width: 1500px;
         padding: 20px;
-        background-color: #858E79;
         /* Leicht transparenter weißer Kasten für den Text */
         border-radius: 10px;
         text-align: center;
+        /*         background-color: #D0AA86; */
     }
 }
 
-h1 {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 46px;
-    line-height: 1.6;
-    font-weight: bolder;
-    background-color: #858E79;
+img {
+    height: 300px;
+}
+
+.p-txt {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #D0AA86;
 }
 
 p {
@@ -33,5 +35,5 @@ p {
     font-weight: bold;
     font-size: 18px;
     line-height: 1.6;
-    background-color: #858E79;
+    background-color: #D0AA86;
 }

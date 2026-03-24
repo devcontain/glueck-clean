@@ -1,7 +1,4 @@
-* {
-    /* background-color: #be816e; */
-    background-color: #d3bd99;
-}
+@use '../scss_global/global.style.scss' as *;
 
 section.bewegung-section {
     display: flex;
@@ -9,6 +6,7 @@ section.bewegung-section {
     align-items: center;
     width: 100%;
     height: 100vh;
+    background-color: $c-bg;
 
     >div.bewegung-content-positon {
 /*         height: 300px; */

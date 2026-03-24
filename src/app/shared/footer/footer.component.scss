@@ -1,0 +1,176 @@
+@use '../../scss_global/global.style.scss' as *;
+
+.background-color {
+  display: flex;
+  justify-content: center;
+  background: $c-bg;
+}
+
+html,
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  min-height: 100svh;
+  margin: 0px;
+}
+
+section {
+  @include display(flex, null, null, row);
+  @include position($h: 310px);
+  flex: 1 1 auto;
+  background-color: $c-bg;
+  max-width: 1920px;
+  color: $c-fg;
+
+  >div {
+    @include display(flex, space-around, center, row);
+    width: 100%;
+    padding-bottom: 32px;
+    background: $c-bg;
+
+    >span {
+      @include display(flex, flex-end);
+      @include position($p: absolute);
+      font-family: var(--ff-fira);
+      color: $c-accent;
+    }
+
+    >span:hover {
+      cursor: default;
+    }
+
+    >div.place-logo {
+      @include display(flex, flex-end, flex-start, column);
+      width: 668px;
+
+      >div.logos {
+        display: flex;
+        padding-top: 32px;
+      }
+
+      >span {
+        font-family: var(--ff-karla);
+        font-size: 16px;
+        line-height: 19.2px;
+        text-align: left;
+        color: #fff;
+      }
+
+      >span:hover {
+        cursor: default;
+      }
+    }
+
+    >div.place-links {
+      @include display(flex, center, flex-end, column);
+      width: 568px;
+      gap: 10px;
+
+      >div {
+        @include display(flex, center);
+        gap: 6px;
+
+        >a {
+          @include display(flex, flex-start, center);
+          text-decoration: none;
+          width: 130px;
+          color: #fff;
+          font-family: var(--ff-fira);
+          gap: 6px;
+
+          >img.green-point {
+            @include position($h: 8px, $w: 8px);
+            visibility: hidden;
+          }
+        }
+
+        >a:hover {
+          color: $c-accent;
+          cursor: pointer;
+        }
+
+        >a:hover img.green-point {
+          visibility: visible;
+        }
+      }
+    }
+
+    >div.place-links:hover {
+      cursor: default;
+    }
+  }
+}
+
+span:hover img {
+  visibility: hidden;
+}
+
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 196px;
+  height: 72px;
+  padding-bottom: 48px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+@include respond(1400px) {
+  .background-color {
+    display: unset;
+  }
+
+  .place-links {
+    padding-right: 32px;
+  }
+
+  .place-logo {
+    padding-left: 32px;
+  }
+}
+
+@include respond(720px) {
+  section {
+    height: auto;
+    min-height: 388px;
+
+    >div {
+      @include display(flex, space-around, center, row);
+
+      >span {
+        margin-top: 290px;
+      }
+    }
+  }
+}
+
+@include respond(500px) {
+  .place-logo {
+    padding-left: 12px;
+  }
+
+  .place-links {
+    padding-right: 0px;
+  }
+
+  .logo {
+    width: 170px;
+    height: 0px;
+    padding-bottom: 128px;
+  }
+
+  section {
+    >div {
+      >div.place-links {
+        >div {
+          >a {
+            width: 112px;
+          }
+        }
+      }
+    }
+  }
+}

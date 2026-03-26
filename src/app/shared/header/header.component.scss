@@ -6,7 +6,7 @@ section {
     width: 100%;
     z-index: 20;
     color: $c-fg;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0));
+/*     background: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
 }
 
 .background-color {
@@ -47,9 +47,9 @@ section {
     cursor: pointer;
     text-decoration: none;
     /*     color: rgb(223, 204, 204); */
-    color: #feae07;
+    color: $nav-menu-color;
     white-space: nowrap;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.4s ease;
 
     font-family: "Open Sans", Arial, sans-serif;
     font-weight: bold;
@@ -59,8 +59,8 @@ section {
 
 .menu nav a:hover,
 .menu nav a:focus-visible {
-    opacity: 0.75;
-    color: #ac7d19;
+/*     opacity: 0.75; */
+    color: $nav-hover-color;
 }
 
 .second {

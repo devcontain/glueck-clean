@@ -18,7 +18,7 @@ section {
   @include display(flex, null, null, row);
   @include position($h: 310px);
   flex: 1 1 auto;
-  background-color: $c-bg;
+/*   background-color: $c-bg; */
   max-width: 1920px;
   color: $c-fg;
 
@@ -26,7 +26,7 @@ section {
     @include display(flex, space-around, center, row);
     width: 100%;
     padding-bottom: 32px;
-    background: $c-bg;
+/*     background: $c-bg; */
 
     >span {
       @include display(flex, flex-end);

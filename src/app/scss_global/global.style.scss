@@ -1,11 +1,28 @@
-$c-bg: #c84b25;
+$c-bg: #c64c1f;
 /* rgb(28,28,28) */
 $c-fg: #ffffffcc;
 $c-accent: #3DCFB6;
 $c-error: #EC7B7B;
 
+$cream-bg: #fffaf2;        /* warmes Creme */
+$surface-light: #f6eddc;   /* helle Kartenfläche */
+$sunflower-light: #fce5a6;   
+$sunflower: #ffbc07;       /* Sonnenblumengelb */
+$sunflower-soft: #f7d96b;  /* helleres Gelb */
+$leaf-soft: #8ea85e;       /* sanftes Grün */
+$leaf: #91a363;
+$earth-warm: #7a5a3a;      /* warmes Braun */
+$text-main: #3e342b;       /* Haupttext */
+$text-muted: #6f6257;      /* ruhiger Text */
+$line-soft: rgba(122, 90, 58, 0.15);
+$white: #ffffff;
+
 $ff-karla: Karla, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 $ff-fira: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+$nav-menu-color: $sunflower-light;
+$nav-hover-color: $sunflower;
+$card-bg: $surface-light;
 
 @mixin display($d: null, $j: null, $a: null, $f: null) {
     @if $d {

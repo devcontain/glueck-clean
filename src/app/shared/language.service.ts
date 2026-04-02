@@ -7,25 +7,43 @@ export class LanguageService {
   // Deutsch
   private readonly homeDe = {
     titel: 'HOME',
-    paragraphs: [
-      'Die Forschung beweist: Bis zu 40% unseres Glücksniveaus haben wir selbst in der Hand (Sonja Lyubomirski, University of California).',
-      'Die Psychologie beschäftigt sich mit der Entstehung und der Behandlung von psychischen Störungen. Die Positive Psychologie ist ein Teilgebiet der Psychologie und ihr Kerninteresse ist es, das Gute im Menschen zu mehren. Drei wesentliche Aspekte der Positiven Psychologie sind neben Glück auch Achtsamkeit und Mut.',
-      'Glück ist eine Frage der Haltung – es kostet Mut, sich damit zu beschäftigen und erfordert die Kunst, achtsam zu sein.',
-      'Glück ist eine spezielle Form von Selbst-Bewusstsein. Nur wenn wir uns bewusst sind, wer wir wirklich sind mit all unseren Gedanken, Hoffnungen, Wünschen, Stärken und Zielen schaffen wir eine solide Basis für ein nachhaltiges Glücksempfinden. Glück ist der Motor für alles, was wir tun – denn unser Hauptziel ist es, glücklich zu sein.',
-      'Glück hat eine positive Wirkung auf Geist, Seele und Körper. Und wer sich dauerhaft unglücklich fühlt, wird schwer an seinem Leben zu tragen haben. Wer sich aber nachhaltig glücklich fühlt, wird aufrecht durchs Leben gehen. Untersuchungen zeigen: Je glücklicher wir sind, desto besser ist unser Selbstwertgefühl, desto wertvoller empfinden wir unsere Beziehungen, desto engagierter sind wir im Beruf und desto mehr sind wir am Ende eines Tages mit uns selbst zufrieden.',
-      'Mit dem Glück ist es wie mit vielen Dingen im Leben: Übung macht den Meister. Lassen Sie uns starten und Ihr persönliches Glückskarussell ankurbeln.'
+    containers: [
+      [
+        'Die Forschung beweist: Bis zu 40% unseres Glücksniveaus haben wir selbst in der Hand (Sonja Lyubomirski, University of California).'
+      ],
+      [
+        'Die Psychologie beschäftigt sich mit der Entstehung und der Behandlung von psychischen Störungen. Die Positive Psychologie ist ein Teilgebiet der Psychologie und ihr Kerninteresse ist es, das Gute im Menschen zu mehren.'
+      ],
+      [
+        'Drei wesentliche Aspekte der Positiven Psychologie sind neben Glück auch Achtsamkeit und Mut.',
+        'Glück ist eine Frage der Haltung – es kostet Mut, sich damit zu beschäftigen und erfordert die Kunst, achtsam zu sein.',
+        'Glück ist eine spezielle Form von Selbst-Bewusstsein. Nur wenn wir uns bewusst sind, wer wir wirklich sind mit all unseren Gedanken, Hoffnungen, Wünschen, Stärken und Zielen, schaffen wir eine solide Basis für ein nachhaltiges Glücksempfinden. Glück ist der Motor für alles, was wir tun – denn unser Hauptziel ist es, glücklich zu sein.',
+        'Glück hat eine positive Wirkung auf Geist, Seele und Körper. Und wer sich dauerhaft unglücklich fühlt, wird schwer an seinem Leben zu tragen haben. Wer sich aber nachhaltig glücklich fühlt, wird aufrecht durchs Leben gehen. Untersuchungen zeigen: Je glücklicher wir sind, desto besser ist unser Selbstwertgefühl, desto wertvoller empfinden wir unsere Beziehungen, desto engagierter sind wir im Beruf und desto mehr sind wir am Ende eines Tages mit uns selbst zufrieden.'
+      ],
+      [
+        'Mit dem Glück ist es wie mit vielen Dingen im Leben: Übung macht den Meister. Lassen Sie uns starten und Ihr persönliches Glückskarussell ankurbeln.'
+      ]
     ]
   };
 
   private readonly homeEn = {
     titel: 'HOME',
-    paragraphs: [
-      'Research shows that up to 40% of our level of happiness lies in our own hands (Sonja Lyubomirsky, University of California).',
-      'Psychology is concerned with the development and treatment of mental disorders. Positive psychology is a subfield of psychology whose core interest is to increase the good in people. Three essential aspects of positive psychology, in addition to happiness, are mindfulness and courage.',
-      'Happiness is a question of attitude – it takes courage to engage with it and requires the art of being mindful.',
-      'Happiness is a special form of self-awareness. Only when we are aware of who we really are, with all our thoughts, hopes, wishes, strengths and goals, can we create a solid foundation for a lasting sense of happiness. Happiness is the driving force behind everything we do – because our primary goal is to be happy.',
-      'Happiness has a positive effect on mind, soul and body. Those who feel permanently unhappy will find life particularly burdensome. Those who feel sustainably happy will walk through life upright. Studies show that the happier we are, the better our self-esteem, the more valuable we perceive our relationships to be, the more committed we are in our work and the more satisfied we are with ourselves at the end of the day.',
-      'Happiness, like many things in life, is a matter of practice. Let us begin and set your personal carousel of happiness in motion.'
+    containers: [
+      [
+        'Die Forschung beweist: Bis zu 40% unseres Glücksniveaus haben wir selbst in der Hand (Sonja Lyubomirski, University of California).'
+      ],
+      [
+        'Die Psychologie beschäftigt sich mit der Entstehung und der Behandlung von psychischen Störungen. Die Positive Psychologie ist ein Teilgebiet der Psychologie und ihr Kerninteresse ist es, das Gute im Menschen zu mehren.'
+      ],
+      [
+        'Drei wesentliche Aspekte der Positiven Psychologie sind neben Glück auch Achtsamkeit und Mut.',
+        'Glück ist eine Frage der Haltung – es kostet Mut, sich damit zu beschäftigen und erfordert die Kunst, achtsam zu sein.',
+        'Glück ist eine spezielle Form von Selbst-Bewusstsein. Nur wenn wir uns bewusst sind, wer wir wirklich sind mit all unseren Gedanken, Hoffnungen, Wünschen, Stärken und Zielen, schaffen wir eine solide Basis für ein nachhaltiges Glücksempfinden. Glück ist der Motor für alles, was wir tun – denn unser Hauptziel ist es, glücklich zu sein.',
+        'Glück hat eine positive Wirkung auf Geist, Seele und Körper. Und wer sich dauerhaft unglücklich fühlt, wird schwer an seinem Leben zu tragen haben. Wer sich aber nachhaltig glücklich fühlt, wird aufrecht durchs Leben gehen. Untersuchungen zeigen: Je glücklicher wir sind, desto besser ist unser Selbstwertgefühl, desto wertvoller empfinden wir unsere Beziehungen, desto engagierter sind wir im Beruf und desto mehr sind wir am Ende eines Tages mit uns selbst zufrieden.'
+      ],
+      [
+        'Mit dem Glück ist es wie mit vielen Dingen im Leben: Übung macht den Meister. Lassen Sie uns starten und Ihr persönliches Glückskarussell ankurbeln.'
+      ]
     ]
   };
 

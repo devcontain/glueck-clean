@@ -1,5 +1,9 @@
 @use '../../../app/scss_global/global.style.scss' as *;
 
+/* :host {
+    display: block;
+} */
+
 section {
     position: sticky;
     top: 0;

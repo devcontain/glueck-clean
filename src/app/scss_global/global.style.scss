@@ -25,6 +25,8 @@ $nav-menu-color: $sunflower-light;
 $nav-hover-color: $sunflower;
 $card-bg: $surface-light;
 
+$page-content: 60px;
+
 @mixin display($d: null, $j: null, $a: null, $f: null) {
     @if $d {
         display: $d;

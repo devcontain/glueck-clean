@@ -1,14 +1,21 @@
 <section class="main-section">
     <div class="main-content-positon">
-<!--         <button type="button" (click)="language.toggleLanguage()">Change Language
-        </button> -->
+        <!-- <button type="button" (click)="language.toggleLanguage()">Change Language</button> -->
+
         <div class="main-context">
             <h1>{{ language.resilience.titel }}</h1>
-            @for (paragraph of language.resilience.paragraphs; track $index) {
-            <p class="home-paragraph">
-                {{ paragraph }}
-            </p>
-            }
+
+            <div class="text-container-wrapper">
+                @for (container of language.resilience.containers; track $index) {
+                <div class="p-txt">
+                    @for (paragraph of container; track $index) {
+                    <p class="home-paragraph">
+                        {{ paragraph }}
+                    </p>
+                    }
+                </div>
+                }
+            </div>
         </div>
     </div>
 </section>

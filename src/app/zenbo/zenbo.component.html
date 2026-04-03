@@ -1,14 +1,21 @@
 <section class="bewegung-section">
+    <h1>{{ language.bewegung.titel }}</h1>
+
     <div class="bewegung-content-positon">
-<!--         <button type="button" (click)="language.toggleLanguage()">Change Language
-        </button> -->
+        <!-- <button type="button" (click)="language.toggleLanguage()">Change Language</button> -->
+
         <div class="bewegung-context">
-            <h1>{{ language.bewegung.titel }}</h1>
-            @for (paragraph of language.bewegung.paragraphs; track $index) {
-            <p class="bewegung-paragraph">
-                {{ paragraph }}
-            </p>
-            }
+            <div class="text-container-wrapper">
+                @for (container of language.bewegung.containers; track $index) {
+                <div class="p-txt">
+                    @for (paragraph of container; track $index) {
+                    <p class="bewegung-paragraph">
+                        {{ paragraph }}
+                    </p>
+                    }
+                </div>
+                }
+            </div>
         </div>
     </div>
 </section>

@@ -50,20 +50,28 @@ export class LanguageService {
   // BEWEGUNG – Deutsch
   private readonly bewegungDe = {
     titel: 'BEWEGUNG TRIFFT ENTSPANNUNG – ZENbo® Balance',
-    paragraphs: [
-      '„Man muss dem Körper Gutes tun, damit die Seele Lust hat, darin zu wohnen.“ (Winston Churchill)',
-      'Jeder fühlt sich einmal unruhig und unausgeglichen. Ob von innen heraus oder durch äußere Umstände. Doch zum Glück lassen sich Körper und Geist neu ausrichten.',
-      'ZENbo® Balance ist ein wunderbares ganzheitliches Anti-Stress-Training für Körper, Geist und Seele. Was bedeutet ZENbo? Das „bo“ steht für den englischen Begriff Body, den Körper. Mit diesem Namen soll betont werden, dass es sich sozusagen um ZEN (Konzentration) für und auf den Körper handelt.',
-      'ZENbo® Balance ist ein ganzheitliches Kursformat mit sanfter Gymnastik und anschließender Entspannung. Das Training ist sehr wirksam und dabei leicht zu erlernen und somit für jedermann und -frau geeignet. Sie können häufig schon nach dem ersten Kurs zu Hause das Erlernte anwenden und die positive Wirkung auf Körper und Geist wahrnehmen.',
-      'Bewegungsübungen im Stand und am Boden, die an Qi Gong und Yoga angelehnt sind, bilden den Bewegungsteil des Trainingsprogramms. Die Beweglichkeit wird verbessert und auch Bauch und Rücken werden gekräftigt. Die bewegten gymnastischen Übungen fördern sowohl das innere Gleichgewicht als auch den Gleichgewichtssinn und das Koordinationsvermögen. Sie werden bewusst und konzentriert ausgeführt und schulen so die Körperwahrnehmung. Der Atem gibt den Rhythmus der Übungen vor, sodass die Body-Übungen fließend ausgeführt werden.',
-      'Das Bewegungstraining wird mit einer Entspannung abgerundet, zum Beispiel durch Autogenes Training, Progressive Muskelentspannung oder Meditation.'
+    containers: [
+      [
+        '„Man muss dem Körper Gutes tun, damit die Seele Lust hat, darin zu wohnen.“ (Winston Churchill)',
+      ],
+      [
+        'Jeder fühlt sich einmal unruhig und unausgeglichen. Ob von innen heraus oder durch äußere Umstände. Doch zum Glück lassen sich Körper und Geist neu ausrichten.',
+      ],
+      [
+        'ZENbo® Balance ist ein wunderbares ganzheitliches Anti-Stress-Training für Körper, Geist und Seele. Was bedeutet ZENbo? Das „bo“ steht für den englischen Begriff Body, den Körper. Mit diesem Namen soll betont werden, dass es sich sozusagen um ZEN (Konzentration) für und auf den Körper handelt.',
+        'ZENbo® Balance ist ein ganzheitliches Kursformat mit sanfter Gymnastik und anschließender Entspannung. Das Training ist sehr wirksam und dabei leicht zu erlernen und somit für jedermann und -frau geeignet. Sie können häufig schon nach dem ersten Kurs zu Hause das Erlernte anwenden und die positive Wirkung auf Körper und Geist wahrnehmen.',
+      ],
+      [
+        'Bewegungsübungen im Stand und am Boden, die an Qi Gong und Yoga angelehnt sind, bilden den Bewegungsteil des Trainingsprogramms. Die Beweglichkeit wird verbessert und auch Bauch und Rücken werden gekräftigt. Die bewegten gymnastischen Übungen fördern sowohl das innere Gleichgewicht als auch den Gleichgewichtssinn und das Koordinationsvermögen. Sie werden bewusst und konzentriert ausgeführt und schulen so die Körperwahrnehmung. Der Atem gibt den Rhythmus der Übungen vor, sodass die Body-Übungen fließend ausgeführt werden.',
+        'Das Bewegungstraining wird mit einer Entspannung abgerundet, zum Beispiel durch Autogenes Training, Progressive Muskelentspannung oder Meditation.'
+      ]
     ]
   };
 
   // BEWEGUNG – Englisch
   private readonly bewegungEn = {
     titel: 'MOVEMENT MEETS RELAXATION – ZENbo® Balance',
-    paragraphs: [
+    containers: [
       '“You must do good to your body so that your soul wants to live in it.” (Winston Churchill)',
       'All of us feel restless and off-balance from time to time – whether due to inner tension or external circumstances. Fortunately, body and mind can be realigned.',
       'ZENbo® Balance is a wonderful, holistic anti-stress training for body, mind and soul. What does ZENbo mean? The “bo” stands for the English word “body”. The name emphasizes that it is essentially about ZEN (focus) for and on the body.',
@@ -88,37 +96,49 @@ export class LanguageService {
 
   private readonly resilienceDe = {
     titel: 'RESILIENZ-TRAINING',
-    paragraphs: [
-      '„Die Kunst ist, einmal mehr aufzustehen, als man umgeworfen wird.“ (Winston Churchill)',
-      'Jeder von uns ist täglich verschiedenen körperlichen und seelischen Belastungen ausgesetzt. Leistungsdruck, Zeitnot und ständig wachsende Anforderungen im Beruf und im Privatleben bestimmen oft genug unseren Alltag. Eine wichtige Rolle bei der Bewältigung dieser täglichen Herausforderungen spielt die mentale Widerstandskraft – die Resilienz.',
-      'Klassischerweise ist das Stehaufmännchen das Sinnbild für Resilienz. Es geht darum, eigene Ressourcen sichtbar und nutzbar zu machen und zu erkennen, dass in jeder Krise und belastenden Situation auch eine Chance stecken kann.',
-      'Anders ausgedrückt: Resilienz ist die Fähigkeit, für belastende Situationen immer den richtigen Schirm in der Tasche zu haben.',
-      'Was bedeutet dies nun für unser tägliches Leben?',
-      'Wir stehen fest am Boden und fallen auch dann nicht um, wenn wir für eine gewisse Zeit nur auf einem Bein stehen, denn mit dem Regenschirm können wir das Gleichgewicht halten.',
-      'Wir fühlen uns sogar so resilient, dass wir die Kraft haben, auch anderen Schutz zu bieten.',
-      'Wir wissen, dass wir jederzeit einen Schirm benutzen können, und das gibt uns ein Gefühl von Sicherheit.',
-      'Wir können uns „maßgeschneidert“ schützen, denn Schirme gibt es in vielen Größen und Farben.',
-      'Wir können uns mithilfe des passenden Schirms jederzeit den Gegebenheiten anpassen.',
-      'Wir können uns dort schützen, wo wir es gerade benötigen.',
-      'Diese Themen wollen wir im Resilienz-Training genauer betrachten:',
-      '1. Stress – Was ist Stress? Wie wirkt sich Stress emotional und körperlich aus?',
-      '2. Ressourcen und Ziele – Welche Ressourcen habe ich bereits und welche sollte ich ausbauen? Welche Ziele im Leben habe ich?',
-      '3. Bedürfnisse und Emotionen – Was sind unsere Grundbedürfnisse? Welchen Sinn haben unsere Gefühle?',
-      '4. Grenzen und Freiraum – Habe ich bereits einen persönlichen Freiraum entwickelt? Habe ich gesunde Grenzen identifiziert und gesetzt?',
-      '5. Konflikte und Kommunikation – Was sind Konflikte? Wie funktioniert effektive Kommunikation?',
-      '6. Vermeidung und erlernte Hilflosigkeit – Warum vermeiden wir? Was ist erlernte Hilflosigkeit?',
-      '7. Annehmen und Loslassen – Was bedeutet es, Situationen anzunehmen und loszulassen?',
-      '8. Selbstwirksamkeit und Selbstverantwortung – Wie kann ich selbstwirksam und selbstverantwortlich denken und handeln?',
-      '9. Entspannung und Schlaf – Habe ich für mich wirksame Methoden der Entspannung gefunden?',
-      '10. Glaubenssysteme und Überzeugungen – Wie entstehen innere Werte und Überzeugungsmuster?',
-      'Philosophie',
-      'Meine Herangehensweise ist lösungsorientiert. Ich arbeite nach dem Ansatz von Steve de Shazer. In Gesprächen erarbeiten wir gemeinsam, welche Wirkung bestimmte Gedanken und Verhaltensweisen haben. Dabei wird gleichzeitig klar, welche Gedanken und Verhaltensweisen Ihnen dabei helfen, Ihre Ziele zu erreichen.',
-      'Es werden immer die Stärken und positiven Verhaltensmuster des Einzelnen zur weiteren Lösungskonstruktion genutzt, die neue Türen im Erkennen, Fühlen und Handeln eröffnen. Während des Trainings unterstütze ich Sie dabei, neue Perspektiven zu entwickeln, Ihre bereits vorhandenen Ressourcen zu erkennen und hilfreiche Gedanken und Verhaltensweisen zu trainieren.',
-      'Ablauf des Trainings',
-      '1. Ihre Anmeldung: Sie kontaktieren mich per Mail oder telefonisch und wir vereinbaren einen Termin für das Erstgespräch.',
-      '2. Ihr Erstgespräch: Ein kurzes, kostenfreies Erstgespräch erlaubt uns ein gegenseitiges Kennenlernen und ermöglicht mir, ein Gespür für Ihr Anliegen zu bekommen. Damit ein Training erfolgreich ist, ist es entscheidend, dass Sie sich gut aufgehoben fühlen. So können Sie über eine weitere Zusammenarbeit entscheiden und wir haben die Möglichkeit, konkrete Vereinbarungen zu treffen.',
-      '3. Ihr Folgetermin / Ihre Folgetermine (45 Minuten – 50 €): So unterschiedlich wie die Anliegen meiner Klientinnen und Klienten sind, so unterschiedlich ist auch die Anzahl unserer gemeinsamen Gespräche. Manchmal reicht bereits eine Sitzung, in anderen Fällen sind mehrere Treffen sinnvoll.',
-      'Sie können dabei von Sitzung zu Sitzung entscheiden, ob Sie noch einmal kommen möchten. Lebenskrisen entwickeln sich meist über einen längeren Zeitraum und sind daher nicht auf „Knopfdruck“ zu lösen. Geduld ist der Schlüssel zum Erfolg.'
+    containers: [
+      [
+        '„Die Kunst ist, einmal mehr aufzustehen, als man umgeworfen wird.“ (Winston Churchill)'
+      ],
+      [
+        'Jeder von uns ist täglich verschiedenen körperlichen und seelischen Belastungen ausgesetzt. Leistungsdruck, Zeitnot und ständig wachsende Anforderungen im Beruf und im Privatleben bestimmen oft genug unseren Alltag. Eine wichtige Rolle bei der Bewältigung dieser täglichen Herausforderungen spielt die mentale Widerstandskraft – die Resilienz.',
+        'Klassischerweise ist das Stehaufmännchen das Sinnbild für Resilienz. Es geht darum, eigene Ressourcen sichtbar und nutzbar zu machen und zu erkennen, dass in jeder Krise und belastenden Situation auch eine Chance stecken kann.',
+        'Anders ausgedrückt: Resilienz ist die Fähigkeit, für belastende Situationen immer den richtigen Schirm in der Tasche zu haben.'
+      ],
+      [
+        'Was bedeutet dies nun für unser tägliches Leben?',
+        'Wir stehen fest am Boden und fallen auch dann nicht um, wenn wir für eine gewisse Zeit nur auf einem Bein stehen, denn mit dem Regenschirm können wir das Gleichgewicht halten.',
+        'Wir fühlen uns sogar so resilient, dass wir die Kraft haben, auch anderen Schutz zu bieten.',
+        'Wir wissen, dass wir jederzeit einen Schirm benutzen können, und das gibt uns ein Gefühl von Sicherheit.',
+        'Wir können uns „maßgeschneidert“ schützen, denn Schirme gibt es in vielen Größen und Farben.',
+        'Wir können uns mithilfe des passenden Schirms jederzeit den Gegebenheiten anpassen.',
+        'Wir können uns dort schützen, wo wir es gerade benötigen.'
+      ],
+      [
+        'Diese Themen wollen wir im Resilienz-Training genauer betrachten:',
+        '1. Stress – Was ist Stress? Wie wirkt sich Stress emotional und körperlich aus?',
+        '2. Ressourcen und Ziele – Welche Ressourcen habe ich bereits und welche sollte ich ausbauen? Welche Ziele im Leben habe ich?',
+        '3. Bedürfnisse und Emotionen – Was sind unsere Grundbedürfnisse? Welchen Sinn haben unsere Gefühle?',
+        '4. Grenzen und Freiraum – Habe ich bereits einen persönlichen Freiraum entwickelt? Habe ich gesunde Grenzen identifiziert und gesetzt?',
+        '5. Konflikte und Kommunikation – Was sind Konflikte? Wie funktioniert effektive Kommunikation?',
+        '6. Vermeidung und erlernte Hilflosigkeit – Warum vermeiden wir? Was ist erlernte Hilflosigkeit?',
+        '7. Annehmen und Loslassen – Was bedeutet es, Situationen anzunehmen und loszulassen?',
+        '8. Selbstwirksamkeit und Selbstverantwortung – Wie kann ich selbstwirksam und selbstverantwortlich denken und handeln?',
+        '9. Entspannung und Schlaf – Habe ich für mich wirksame Methoden der Entspannung gefunden?',
+        '10. Glaubenssysteme und Überzeugungen – Wie entstehen innere Werte und Überzeugungsmuster?'
+      ],
+      [
+        'Philosophie',
+        'Meine Herangehensweise ist lösungsorientiert. Ich arbeite nach dem Ansatz von Steve de Shazer. In Gesprächen erarbeiten wir gemeinsam, welche Wirkung bestimmte Gedanken und Verhaltensweisen haben. Dabei wird gleichzeitig klar, welche Gedanken und Verhaltensweisen Ihnen dabei helfen, Ihre Ziele zu erreichen.',
+        'Es werden immer die Stärken und positiven Verhaltensmuster des Einzelnen zur weiteren Lösungskonstruktion genutzt, die neue Türen im Erkennen, Fühlen und Handeln eröffnen. Während des Trainings unterstütze ich Sie dabei, neue Perspektiven zu entwickeln, Ihre bereits vorhandenen Ressourcen zu erkennen und hilfreiche Gedanken und Verhaltensweisen zu trainieren.'
+      ],
+      [
+        'Ablauf des Trainings',
+        '1. Ihre Anmeldung: Sie kontaktieren mich per Mail oder telefonisch und wir vereinbaren einen Termin für das Erstgespräch.',
+        '2. Ihr Erstgespräch: Ein kurzes, kostenfreies Erstgespräch erlaubt uns ein gegenseitiges Kennenlernen und ermöglicht mir, ein Gespür für Ihr Anliegen zu bekommen. Damit ein Training erfolgreich ist, ist es entscheidend, dass Sie sich gut aufgehoben fühlen. So können Sie über eine weitere Zusammenarbeit entscheiden und wir haben die Möglichkeit, konkrete Vereinbarungen zu treffen.',
+        '3. Ihr Folgetermin / Ihre Folgetermine (45 Minuten – 50 €): So unterschiedlich wie die Anliegen meiner Klientinnen und Klienten sind, so unterschiedlich ist auch die Anzahl unserer gemeinsamen Gespräche. Manchmal reicht bereits eine Sitzung, in anderen Fällen sind mehrere Treffen sinnvoll.',
+        'Sie können dabei von Sitzung zu Sitzung entscheiden, ob Sie noch einmal kommen möchten. Lebenskrisen entwickeln sich meist über einen längeren Zeitraum und sind daher nicht auf „Knopfdruck“ zu lösen. Geduld ist der Schlüssel zum Erfolg.'
+      ]
     ]
   };
 
@@ -138,22 +158,34 @@ export class LanguageService {
 
   private readonly pricesDatesDe = {
     titel: 'PREISE & TERMINE',
-    paragraphs: [
-      'Bewegung trifft Entspannung – „ZENbo Balance“.',
-      'Auch als Geschenkgutschein – auch für einzelne Stunden – erhältlich.',
-      'Termine in der Gruppe (max. 8 Teilnehmer*innen). Ein Einstieg ist jederzeit möglich. Die Kosten für einen 8-Wochen-Kurs liegen bei 85 €. Das Kurs-Ticket ist 9 Wochen gültig.',
-      'Montags: 18:00 - 19:00 Uhr – ausgebucht',
-      'Montags: 19:15 - 20:15 Uhr – noch 2 freie Plätze',
-      'Dienstags: 17:30 - 18:30 Uhr – ausgebucht',
-      'Mittwochs: 18:00 - 19:00 Uhr – ausgebucht',
-      'Eine Schnupperstunde ist nach vorheriger Absprache jederzeit möglich und kostet 5 € pro Person.',
-      'Gern biete ich auch Privattrainings an. Termine nach Absprache. Die Stunde kostet 60 € für maximal 3 Personen.',
-      'Wichtiger Hinweis',
-      'Mein Angebot kann nicht mit den Krankenkassen abgerechnet werden, da es außerhalb des gesetzlichen Leistungskataloges der Krankenkassen liegt.',
-      'Beratung',
-      '1. Ihre Anmeldung: Sie kontaktieren mich per Mail oder telefonisch und wir vereinbaren einen Termin für das Erstgespräch.',
-      '2. Ihr Erstgespräch: Ein kurzes, kostenfreies Erstgespräch erlaubt uns ein gegenseitiges Kennenlernen und ermöglicht mir, ein Gespür für Ihr Anliegen zu bekommen. Damit eine Beratung erfolgreich ist, ist es entscheidend, dass Sie sich gut aufgehoben fühlen. So können Sie über eine weitere Zusammenarbeit entscheiden und wir haben die Möglichkeit, konkrete Vereinbarungen zu treffen.',
-      '3. Ihr Folgetermin / Ihre Folgetermine (45 Minuten – 50 €): Sie haben sich für eine Beratung bei mir entschieden. Nun vereinbaren wir weitere Termine und schaffen damit eine Voraussetzung für eine konstruktive und zielorientierte Arbeit. Zu jeder Zeit gilt: Sie sind kein Patient, sondern bestimmen jederzeit selbst über Ihre Ziel- und Veränderungswünsche.'
+    containers: [
+      [
+        'Bewegung trifft Entspannung – „ZENbo Balance“.',
+        'Auch als Geschenkgutschein – auch für einzelne Stunden – erhältlich.'
+      ],
+      [
+        'Termine in der Gruppe (max. 8 Teilnehmer*innen). Ein Einstieg ist jederzeit möglich. Die Kosten für einen 8-Wochen-Kurs liegen bei 85 €. Das Kurs-Ticket ist 9 Wochen gültig.'
+      ],
+      [
+        'Montags: 18:00 - 19:00 Uhr',
+        'Montags: 19:15 - 20:15 Uhr',
+        'Dienstags: 17:30 - 18:30 Uhr',
+        'Mittwochs: 18:00 - 19:00 Uhr'
+      ],
+      [
+        'Eine Schnupperstunde ist nach vorheriger Absprache jederzeit möglich und kostet 5 € pro Person.',
+        'Gern biete ich auch Privattrainings an. Termine nach Absprache. Die Stunde kostet 60 € für maximal 3 Personen.'
+      ],
+      [
+        'Wichtiger Hinweis',
+        'Mein Angebot kann nicht mit den Krankenkassen abgerechnet werden, da es außerhalb des gesetzlichen Leistungskataloges der Krankenkassen liegt.',
+        'Beratung'
+      ],
+      [
+        '1. Ihre Anmeldung: Sie kontaktieren mich per Mail oder telefonisch und wir vereinbaren einen Termin für das Erstgespräch.',
+        '2. Ihr Erstgespräch: Ein kurzes, kostenfreies Erstgespräch erlaubt uns ein gegenseitiges Kennenlernen und ermöglicht mir, ein Gespür für Ihr Anliegen zu bekommen. Damit eine Beratung erfolgreich ist, ist es entscheidend, dass Sie sich gut aufgehoben fühlen. So können Sie über eine weitere Zusammenarbeit entscheiden und wir haben die Möglichkeit, konkrete Vereinbarungen zu treffen.',
+        '3. Ihr Folgetermin / Ihre Folgetermine (45 Minuten – 50 €): Sie haben sich für eine Beratung bei mir entschieden. Nun vereinbaren wir weitere Termine und schaffen damit eine Voraussetzung für eine konstruktive und zielorientierte Arbeit. Zu jeder Zeit gilt: Sie sind kein Patient, sondern bestimmen jederzeit selbst über Ihre Ziel- und Veränderungswünsche.'
+      ]
     ]
   };
 

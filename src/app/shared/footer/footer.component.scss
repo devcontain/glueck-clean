@@ -18,7 +18,7 @@ section {
   @include display(flex, null, null, row);
   @include position($h: 310px);
   flex: 1 1 auto;
-/*   background-color: $c-bg; */
+  /*   background-color: $c-bg; */
   max-width: 1920px;
   color: $c-fg;
 
@@ -26,13 +26,13 @@ section {
     @include display(flex, space-around, center, row);
     width: 100%;
     padding-bottom: 32px;
-/*     background: $c-bg; */
+    /*     background: $c-bg; */
 
     >span {
       @include display(flex, flex-end);
       @include position($p: absolute);
       font-family: var(--ff-fira);
-      color: $c-accent;
+      color: $footer-hover;
     }
 
     >span:hover {
@@ -43,7 +43,7 @@ section {
       @include display(flex, flex-end, flex-start, column);
       width: 668px;
 
-      >div.logos {
+      >button.logos {
         display: flex;
         padding-top: 32px;
       }
@@ -85,7 +85,7 @@ section {
         }
 
         >a:hover {
-          color: $c-accent;
+          color: $footer-hover;
           cursor: pointer;
         }
 
@@ -105,16 +105,22 @@ span:hover img {
   visibility: hidden;
 }
 
-.logo {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 196px;
-  height: 72px;
-  padding-bottom: 48px;
+.logos {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
 }
 
-.logo:hover {
+.logos:hover app-logo,
+.logos:focus-visible app-logo {
+  --logo-hover-opacity: 0.31;
+}
+
+.logos:hover {
   cursor: pointer;
 }
 

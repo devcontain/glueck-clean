@@ -85,14 +85,14 @@ section {
 .logos {
     all: unset;
     cursor: pointer;
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     width: 200px;
     height: 200px;
 }
 
-.logo-svg {
+/* .logo-svg {
     width: 140px;
     height: auto;
     display: block;
@@ -103,11 +103,11 @@ section {
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-}
+} */
 
-.logos:hover .logo-svg .cls-12,
-.logos:focus-visible .logo-svg .cls-12 {
-    opacity: 0.31;
+.logos:hover app-logo,
+.logos:focus-visible app-logo {
+    --logo-hover-opacity: 0.31;
 }
 
 #toggle_button {

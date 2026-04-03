@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { LanguageService } from '../language.service';
 import { filter } from 'rxjs/operators';
+import { LogoComponent } from '../svg/logo/logo.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, LogoComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

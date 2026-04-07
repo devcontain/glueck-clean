@@ -11,10 +11,10 @@ section.main-section {
     padding-top: $page-content;
 
     >div.main-content-positon {
-/*         height: 300px; */
+        /*         height: 300px; */
         width: 1500px;
         padding: 20px;
-        background-color: #858E79;
+        background-color: #EDEAE5;
         /* Leicht transparenter weißer Kasten für den Text */
         border-radius: 10px;
         text-align: start;
@@ -26,7 +26,7 @@ h1 {
     font-size: 46px;
     line-height: 1.6;
     font-weight: bolder;
-/*     background-color: #858E79; */
+    color: $header-colors;
 }
 
 p {
@@ -34,5 +34,5 @@ p {
     font-weight: bold;
     font-size: 18px;
     line-height: 1.6;
-    background-color: #858E79;
+    background-color: #EDEAE5;
 }

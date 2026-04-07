@@ -74,6 +74,10 @@ section {
     color: $nav-hover-color;
 }
 
+.menu nav a.active-link {
+    color: $nav-hover-color;
+}   
+
 .second {
     flex: 0 0 auto;
     display: flex;

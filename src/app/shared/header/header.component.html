@@ -19,12 +19,29 @@
 
             <nav>
 
-                <a routerLink="/">Home</a>
-                <a routerLink="/ueber-mich">Über mich</a>
-                <a routerLink="/zenbo-balance">ZENbo®Balance</a>
-                <a routerLink="/resilienz-training">Resilienz-Training</a>
-                <a routerLink="/kontakt">Kontakt</a>
-                <a routerLink="/prices">Preise & Termine</a>
+                <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+                    Home
+                </a>
+
+                <a routerLink="/ueber-mich" routerLinkActive="active-link">
+                    Über mich
+                </a>
+
+                <a routerLink="/zenbo-balance" routerLinkActive="active-link">
+                    ZENbo®Balance
+                </a>
+
+                <a routerLink="/resilienz-training" routerLinkActive="active-link">
+                    Resilienz-Training
+                </a>
+
+                <a routerLink="/kontakt" routerLinkActive="active-link">
+                    Kontakt
+                </a>
+
+                <a routerLink="/prices" routerLinkActive="active-link">
+                    Preise & Termine
+                </a>
 
             </nav>
         </div>

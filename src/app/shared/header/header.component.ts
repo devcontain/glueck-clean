@@ -2,13 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from "@angular/router";
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { LogoComponent } from '../svg/logo/logo.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterLink, LogoComponent ],
+  imports: [FormsModule, CommonModule, RouterLink, LogoComponent, RouterLinkActive ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

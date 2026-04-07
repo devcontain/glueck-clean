@@ -1,10 +1,22 @@
 <section class="main-section">
+
+    @if (language.home.containers.length > 0) {
+    <div class="p-txt first-container">
+        @for (paragraph of language.home.containers[0]; track $index) {
+        <p class="home-paragraph first-paragraph">
+            {{ paragraph }}
+        </p>
+        }
+    </div>
+    }
+
     <div class="main-content-positon">
         <div class="main-context">
-            <!-- <img src="../../assets/img/main_logo.png" alt="Logo"> -->
 
             <div class="text-container-wrapper">
+
                 @for (container of language.home.containers; track $index) {
+                @if ($index > 0) {
                 <div class="p-txt">
                     @for (paragraph of container; track $index) {
                     <p class="home-paragraph">
@@ -13,6 +25,8 @@
                     }
                 </div>
                 }
+                }
+
             </div>
         </div>
     </div>

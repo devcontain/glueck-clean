@@ -13,12 +13,17 @@ section.bewegung-section {
     padding-right: 20px;
     box-sizing: border-box;
 
-    > div.bewegung-content-positon {
+    >div.bewegung-content-positon {
         width: 1500px;
         max-width: 100%;
         padding: 20px;
         border-radius: 10px;
         text-align: center;
+        background-color: #EDEAE5;
+        border: 1px;
+        border-color: rgba(0, 0, 0, 0.10);
+        border-style: solid;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
     }
 }
 
@@ -83,7 +88,7 @@ h1 {
         padding-right: 12px;
     }
 
-    > div.bewegung-content-positon {
+    >div.bewegung-content-positon {
         padding: 12px;
     }
 

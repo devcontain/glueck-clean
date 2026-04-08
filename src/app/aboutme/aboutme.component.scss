@@ -18,6 +18,10 @@ section.main-section {
         /* Leicht transparenter weißer Kasten für den Text */
         border-radius: 10px;
         text-align: start;
+        border: 1px;
+        border-color: rgba(0, 0, 0, 0.10);
+        border-style: solid;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
     }
 }
 

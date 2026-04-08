@@ -16,6 +16,12 @@ section.main-section {
         padding: 20px;
         border-radius: 10px;
         text-align: center;
+        background-color: #EDEAE5;
+        border: 1px;
+        border-color: rgba(0, 0, 0, 0.10);
+        border-style: solid;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
+        margin-top: 32px;
     }
 }
 
@@ -62,9 +68,10 @@ img {
 }
 
 .first-paragraph {
+    padding-top: 116px;
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.4;
+/*     line-height: 1.4; */
 }
 
 .home-paragraph {

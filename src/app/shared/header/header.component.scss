@@ -13,7 +13,11 @@ section {
     z-index: 20;
     color: $c-fg;
     background-color: $background-header;
-/*     background: linear-gradient(to bottom,
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
+
+    /*     background: linear-gradient(to bottom,
             rgba($background-header, 1) 0%,
             rgba($background-header, 0.75) 35%,
             rgba($background-header, 0.35) 55%,
@@ -76,7 +80,7 @@ section {
 
 .menu nav a.active-link {
     color: $nav-hover-color;
-}   
+}
 
 .second {
     flex: 0 0 auto;

@@ -1,5 +1,15 @@
-<section class="bewegung-section">
+<section class="bewegung-section fade-page">
     <h1>{{ language.bewegung.titel }}</h1>
+
+    @if (language.bewegung.containers.length > 0) {
+    <div class="p-txt first-container">
+        @for (paragraph of language.bewegung.containers[0]; track $index) {
+        <p class="bewegung-paragraph first-paragraph">
+            {{ paragraph }}
+        </p>
+        }
+    </div>
+    }
 
     <div class="bewegung-content-positon">
         <!-- <button type="button" (click)="language.toggleLanguage()">Change Language</button> -->
@@ -7,6 +17,7 @@
         <div class="bewegung-context">
             <div class="text-container-wrapper">
                 @for (container of language.bewegung.containers; track $index) {
+                @if ($index > 0) {
                 <div class="p-txt">
                     @for (paragraph of container; track $index) {
                     <p class="bewegung-paragraph">
@@ -14,6 +25,7 @@
                     </p>
                     }
                 </div>
+                }
                 }
             </div>
         </div>

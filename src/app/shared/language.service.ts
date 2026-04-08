@@ -53,7 +53,7 @@ export class LanguageService {
     containers: [
       [
         '„Man muss dem Körper Gutes tun, damit die Seele Lust hat, darin zu wohnen.“ (Winston Churchill)',
-      ],
+      ],      
       [
         'Jeder fühlt sich einmal unruhig und unausgeglichen. Ob von innen heraus oder durch äußere Umstände. Doch zum Glück lassen sich Körper und Geist neu ausrichten.',
       ],

@@ -48,15 +48,28 @@ h1 {
     gap: 24px;
 }
 
+.first-container {
+    height: 400px;
+    width: 100%;
+    /*     padding: 32px; */
+    /*     border-radius: 16px; */
+    /*     background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
+    text-align: center;
+    background-image: url('../../assets/img/sunset_txt_highlight.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
 .p-txt {
-    padding: 18px;
-    border-radius: 10px;
-    background-color: #D0AA86;
-    text-align: left;
-    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: #D0AA86;
+    min-height: 180px;
     box-sizing: border-box;
 }
 

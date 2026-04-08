@@ -1,19 +1,27 @@
-$c-bg:  #efe7da;
+$c-bg: #efe7da;
 $background-header: #E1DACA;
 $c-fg: #ffffffcc;
 $c-accent: #3DCFB6;
 $c-error: #EC7B7B;
 
-$cream-bg: #fffaf2;        /* warmes Creme */
-$surface-light: #f6eddc;   /* helle Kartenfläche */
-$sunflower-light: #e6c981;   
-$sunflower: #ffbc07;       /* Sonnenblumengelb */
-$sunflower-soft: #f7d96b;  /* helleres Gelb */
-$leaf-soft: #8ea85e;       /* sanftes Grün */
-$leaf: #91a363;             
-$earth-warm: #7a5a3a;      /* warmes Braun */
-$text-main: #3e342b;       /* Haupttext */
-$text-muted: #6f6257;      /* ruhiger Text */
+$cream-bg: #fffaf2;
+/* warmes Creme */
+$surface-light: #f6eddc;
+/* helle Kartenfläche */
+$sunflower-light: #e6c981;
+$sunflower: #ffbc07;
+/* Sonnenblumengelb */
+$sunflower-soft: #f7d96b;
+/* helleres Gelb */
+$leaf-soft: #8ea85e;
+/* sanftes Grün */
+$leaf: #91a363;
+$earth-warm: #7a5a3a;
+/* warmes Braun */
+$text-main: #3e342b;
+/* Haupttext */
+$text-muted: #6f6257;
+/* ruhiger Text */
 $line-soft: rgba(122, 90, 58, 0.15);
 $white: #ffffff;
 
@@ -26,11 +34,29 @@ $card-bg: $surface-light;
 
 $footer-hover: $sunflower;
 
-$header-colors: #91a363; 
+$header-colors: #91a363;
 
 $page-content: 32px;
 
 /* background-color: #E1DACA; */
+
+.fade-page {
+    opacity: 0;
+    transform: translateY(-12px);
+    animation: fadePageIn 800ms ease-out forwards;
+}
+
+@keyframes fadePageIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @mixin display($d: null, $j: null, $a: null, $f: null) {
     @if $d {

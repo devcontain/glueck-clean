@@ -9,6 +9,7 @@ section.main-section {
     min-height: 100vh;
     background-color: $c-bg;
     padding-top: $page-content;
+    padding-bottom: $page-content;
 
     >div.main-content-positon {
         width: 1500px;

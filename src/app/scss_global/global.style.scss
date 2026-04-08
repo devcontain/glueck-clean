@@ -38,18 +38,16 @@ $header-colors: #91a363;
 
 $page-content: 32px;
 
-/* background-color: #E1DACA; */
-
 .fade-page {
     opacity: 0;
-    transform: translateY(-12px);
+    transform: translateY(-8px);
     animation: fadePageIn 800ms ease-out forwards;
 }
 
 @keyframes fadePageIn {
     from {
         opacity: 0;
-        transform: translateY(-12px);
+        transform: translateY(-8px);
     }
 
     to {

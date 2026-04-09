@@ -41,10 +41,6 @@ export class LegalNoticeComponent {
    * Scroll to bottom of page
    */
   back(): void {
-    this.router.navigate(['/'], { replaceUrl: true }).then(() => {
-      setTimeout(() => {
-        document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 0);
-    });
+    this.router.navigate(['/'])
   }
 }

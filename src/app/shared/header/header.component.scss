@@ -31,15 +31,14 @@ section {
 }
 
 .contentmax {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1440px;
     height: 200px;
     margin: 0 auto;
     padding: 0 32px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 32px;
 }
 

@@ -1,1 +1,96 @@
-<p>legal-notice works!</p>
+<section>
+    <div class="back-button-pos">
+        <button class="b-left" (click)="back()">
+            <img class="left-arrow" [src]="leftArrowSrc" (mouseenter)="onLeftEnter()" (mouseleave)="onLeftLeave()"
+                alt="left">
+        </button>
+    </div>
+
+    <div class="data-notice">
+        <h1>{{ language.legalNotice.s1Title }}</h1>
+        <p>{{ language.legalNotice.s1Subtitle }}</p>
+        <p>{{ language.legalNotice.s1P1 }}</p>
+
+        <h1>{{ language.legalNotice.s2Title }}</h1>
+        <p>{{ language.legalNotice.s2Q1 }}</p>
+        <p>{{ language.legalNotice.s2A1 }}</p>
+        <p>{{ language.legalNotice.s2Q2 }}</p>
+        <p>{{ language.legalNotice.s2A2a }}</p>
+        <p>{{ language.legalNotice.s2A2b }}</p>
+        <p>{{ language.legalNotice.s2Q3 }}</p>
+        <p>{{ language.legalNotice.s2A3 }}</p>
+        <p>{{ language.legalNotice.s2Q4 }}</p>
+        <p>{{ language.legalNotice.s2A4 }}</p>
+
+        <h1>{{ language.legalNotice.s3Title }}</h1>
+        <p>
+            {{ language.legalNotice.s3P1 }}<br>
+            {{ language.legalNotice.s3P2 }}
+        </p>
+
+        <h1>{{ language.legalNotice.s4Title }}</h1>
+        <p>{{ language.legalNotice.s4Subtitle }}</p>
+        <p>{{ language.legalNotice.s4P1 }}</p>
+        <p>{{ language.legalNotice.s4P2 }}</p>
+        <p>{{ language.legalNotice.s4P3 }}</p>
+
+        <p>{{ language.legalNotice.s5Subtitle }}</p>
+        <p>
+            {{ language.legalNotice.s5Name }} <br>
+            {{ language.legalNotice.s5CareOf }} <br>
+            {{ language.legalNotice.s5Street }} <br>
+            {{ language.legalNotice.s5City }} <br>
+            {{ language.legalNotice.s5Country }}
+        </p>
+        <p>
+            {{ language.legalNotice.s5PhoneLabel }} {{ language.legalNotice.s5Phone }}
+        </p>
+        <p>
+            <a href="">
+                HIER STEHT DEINE E-MAIL
+            </a>
+        </p>
+        <p>{{ language.legalNotice.s5ControllerText }}</p>
+
+        <p>{{ language.legalNotice.s6Subtitle }}</p>
+        <p>{{ language.legalNotice.s6P }}</p>
+
+        <p>{{ language.legalNotice.s7Subtitle }}</p>
+        <p>{{ language.legalNotice.s7P }}</p>
+
+        <p>{{ language.legalNotice.s8Subtitle }}</p>
+        <p>{{ language.legalNotice.s8P }}</p>
+
+        <p>{{ language.legalNotice.s9Subtitle }}</p>
+        <p>{{ language.legalNotice.s9P }}</p>
+
+        <p>{{ language.legalNotice.s10Subtitle }}</p>
+        <p>{{ language.legalNotice.s10P1 }}</p>
+        <p>{{ language.legalNotice.s10P2 }}</p>
+
+        <p>{{ language.legalNotice.s11Subtitle }}</p>
+        <p>{{ language.legalNotice.s11P }}</p>
+
+        <p>{{ language.legalNotice.s12Subtitle }}</p>
+        <p>{{ language.legalNotice.s12P }}</p>
+
+        <p>{{ language.legalNotice.s13Subtitle }}</p>
+        <p>{{ language.legalNotice.s13P }}</p>
+
+        <p>{{ language.legalNotice.s14Subtitle }}</p>
+        <p>{{ language.legalNotice.s14Intro }}</p>
+        <li>{{ language.legalNotice.s14Li1 }}</li><br>
+        <li>{{ language.legalNotice.s14Li2 }}</li><br>
+        <li>{{ language.legalNotice.s14Li3 }}</li><br>
+        <li>{{ language.legalNotice.s14Li4 }}</li>
+        <p>{{ language.legalNotice.s14Outro }}</p>
+
+        <p>{{ language.legalNotice.s15Subtitle }}</p>
+        <p>{{ language.legalNotice.s15P }}</p>
+
+        <p>{{ language.legalNotice.s16SourceLabel }}</p>
+        <a href="https://www.e-recht24.de/">
+            {{ language.legalNotice.s16SourceText }}
+        </a>
+    </div>
+</section>

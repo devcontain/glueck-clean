@@ -1,1 +1,64 @@
-<p>imprint works!</p>
+<section>
+    <div class="back-button-pos">
+        <button class="b-left" (click)="back()">
+            <img class="left-arrow" [src]="leftArrowSrc" (mouseenter)="onLeftEnter()" (mouseleave)="onLeftLeave()"
+                alt="left">
+        </button>
+    </div>
+
+    <div class="impressum">
+        <h1>{{ language.imprint.title }}</h1>
+        <p>{{ language.imprint.infoLine }}</p>
+
+        <p>
+            {{ language.imprint.addressName }} <br>
+            {{ language.imprint.addressCareOf }} <br>
+            {{ language.imprint.addressStreet }} <br>
+            {{ language.imprint.addressCity }} <br>
+            {{ language.imprint.addressCountry }}
+        </p>
+
+        <p>
+            <strong>{{ language.imprint.representedByLabel }}</strong><br>
+            {{ language.imprint.representedByName }}<br>
+        </p>
+
+        <p>
+            <strong>{{ language.imprint.contactLabel }}</strong><br>
+            {{ language.imprint.phoneLabel }} {{ language.imprint.phone }}<br>
+            {{ language.imprint.emailLabel }}
+            <a href="mailto:contact@devcontain.de">{{ language.imprint.emailText }}</a>
+        </p>
+
+        <p>
+            <strong class="headercolor">{{ language.imprint.disclaimerLabel }}</strong>
+            <br><br>
+            <strong class="headercolor">{{ language.imprint.contentTitle }}</strong>
+            <br><br>
+            {{ language.imprint.contentText }}
+            <br><br>
+            <strong class="headercolor">{{ language.imprint.linksTitle }}</strong>
+            <br><br>
+            {{ language.imprint.linksText }}
+            <br><br>
+            <strong class="headercolor">{{ language.imprint.copyrightTitle }}</strong>
+            <br><br>
+            {{ language.imprint.copyrightText }}
+            <br><br>
+            <strong class="headercolor">{{ language.imprint.privacyTitle }}</strong>
+            <br><br>
+            {{ language.imprint.privacyText }}
+        </p>
+        <br>
+
+        {{ language.imprint.footerPrefix }}
+        <a [href]="language.imprint.generatorUrl" target="_blank" rel="noopener">
+            {{ language.imprint.generatorName }}
+        </a>
+        {{ language.imprint.toggleValue }}
+        <span>der</span>
+        <a [href]="language.imprint.lawfirmUrl" target="_blank" rel="noopener">
+            {{ language.imprint.lawfirmName }}
+        </a>
+    </div>
+</section>

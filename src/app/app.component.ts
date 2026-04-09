@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
@@ -18,4 +18,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 })
 export class AppComponent {
   title = 'glueck-selbermachen';
+
+  constructor(public router: Router) {}
+
+  get showHeader(): boolean {
+    return !['/imprint', '/legal-notice'].includes(this.router.url);
+  }
 }

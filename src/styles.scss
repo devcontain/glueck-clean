@@ -1,3 +1,33 @@
 * {
     margin: 0;
 }
+
+$scrollbar-main: #803a21; // Headerfarbe
+$scrollbar-track: #edeae5; // heller Hintergrund
+$scrollbar-hover: #5f2b18; // dunkler beim Hover
+
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $scrollbar-track;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-main;
+  border-radius: 10px;
+  border: 2px solid $scrollbar-track;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $scrollbar-hover;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-main $scrollbar-track;
+}

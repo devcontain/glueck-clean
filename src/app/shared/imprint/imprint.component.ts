@@ -1,41 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LanguageService } from '../language.service';
+import { YellowArrowLeftComponent } from '../svg/yellow-arrow-left/yellow-arrow-left.component';
 
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [],
+  imports: [YellowArrowLeftComponent],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
-  public img = {
-    leftDefault: '../../assets/img/left-arrow.png',
-    leftHover: '../../assets/img/left-arrow-move.png'
-  };
-
-  public isLeftHovered = false;
-
-  get leftArrowSrc(): string {
-    return this.isLeftHovered ? this.img.leftHover : this.img.leftDefault;
-  }
-
   constructor(private router: Router, public language: LanguageService) { }
-
-  /**
-   * Set left arrow hover state to active
-   */
-  onLeftEnter(): void {
-    this.isLeftHovered = true;
-  }
-
-  /**
-   * Reset left arrow hover state to inactive
-   */
-  onLeftLeave(): void {
-    this.isLeftHovered = false;
-  }
 
   /**
    * Scroll to bottom of page

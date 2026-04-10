@@ -1,19 +1,29 @@
 <section class="main-section fade-page">
+    <h1>{{ language.pricesdate.titel }}</h1>
     <div class="main-content-positon">
-        <!-- <button type="button" (click)="language.toggleLanguage()">Change Language</button> -->
-
         <div class="main-context">
-            <div class="text-container-wrapper">
-                @for (container of language.pricesdate.containers; track $index) {
-                <div class="p-txt">
-                    @for (paragraph of container; track $index) {
-                    <p class="home-paragraph">
+            @for (section of sections; track section.paragraphs) {
+            <div class="text-block" [class.schedule-block]="section.type === 'schedule'"
+                [class.notice-block]="section.type === 'notice'">
+                @if (section.type === 'schedule') {
+                @for (paragraph of section.paragraphs; track paragraph) {
+                <div class="schedule-line-wrap">
+                    <p class="home-paragraph schedule-line">
                         {{ paragraph }}
                     </p>
-                    }
                 </div>
                 }
+                } @else {
+                @for (paragraph of section.paragraphs; track paragraph; let paragraphIndex = $index) {
+                <p class="home-paragraph" [class.block-title]="paragraphIndex === 0"
+                    [class.price-line]="section.type === 'prices' && paragraphIndex > 0"
+                    [class.process-line]="section.type === 'process' && paragraphIndex > 0">
+                    {{ paragraph }}
+                </p>
+                }
+                }
             </div>
+            }
         </div>
     </div>
 </section>

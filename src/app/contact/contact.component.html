@@ -1,11 +1,10 @@
 <section class="main-section fade-page">
     <h1>{{ language.contact.titel }}</h1>
     <div class="main-content-positon">
-        <!--         <button type="button" (click)="language.toggleLanguage()">Change Language
-        </button> -->
         <div class="main-context">
             @for (paragraph of language.contact.paragraphs; track $index) {
-            <p class="home-paragraph">
+            <p class="home-paragraph" [class.intro-line]="$index < 2" [class.person-line]="$index === 2"
+                [class.contact-line]="$index === 5 || $index === 7" [class.note-line]="$index === 6">
                 {{ paragraph }}
             </p>
             }

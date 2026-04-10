@@ -7,24 +7,14 @@ section.main-section {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background-color: $c-bg;
-    padding-top: $page-content;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: $background-mainpage;
+    padding: $page-content 20px;
     box-sizing: border-box;
+}
 
-    >div.main-content-positon {
-        width: 1500px;
-        max-width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        box-sizing: border-box;
-        background-color: #EDEAE5;
-        border: 1px;
-        border-color: rgba(0, 0, 0, 0.10);
-        border-style: solid;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
-    }
+.main-content-positon {
+    width: 1500px;
+    max-width: 100%;
 }
 
 .main-context {
@@ -42,37 +32,87 @@ h1 {
     line-height: 1.3;
     font-weight: bolder;
     color: $header-colors;
+    text-align: center;
+}
+
+.hero-quote {
+    width: min(980px, 100%);
+    margin: 16px 0 32px;
+    text-align: center;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $earth-warm;
 }
 
 .text-container-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 }
 
 .p-txt {
-    padding: 18px;
+    padding: 24px 26px;
     border-radius: 10px;
-    background-color: #858E79;
     text-align: left;
     min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 12px;
     box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
+    background-color: #edeae5;
+}
+
+.card-intro {
+    background: linear-gradient(180deg, #e8dfcf 0%, #ddd4c1 100%);
+}
+
+.card-balance {
+    background: linear-gradient(180deg, #d7e0cd 0%, #c8d3bc 100%);
+}
+
+.card-topics {
+    background: linear-gradient(180deg, #cfd9c8 0%, #c3cfbd 100%);
+}
+
+.card-philosophy {
+    background: linear-gradient(180deg, #eadfce 0%, #e1d1b9 100%);
+}
+
+.card-process {
+    background: linear-gradient(180deg, #d7c2a7 0%, #ccb090 100%);
 }
 
 .home-paragraph {
-    margin: 0 0 12px 0;
+    margin: 0;
     font-family: "Open Sans", Arial, sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
+    color: $text-main;
 }
 
-.home-paragraph:last-child {
-    margin-bottom: 0;
+.section-title {
+    color: $header-colors;
+    font-size: 21px;
+}
+
+.topic-list {
+    margin: 0;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $text-main;
 }
 
 @media (max-width: 900px) {
@@ -83,27 +123,37 @@ h1 {
     h1 {
         font-size: 34px;
     }
+
+    .hero-quote {
+        font-size: 21px;
+    }
 }
 
 @media (max-width: 600px) {
     section.main-section {
         padding-left: 12px;
         padding-right: 12px;
-
-        >div.main-content-positon {
-            padding: 12px;
-        }
     }
 
     .p-txt {
-        padding: 14px;
+        padding: 18px;
     }
 
-    .home-paragraph {
+    .home-paragraph,
+    .topic-list {
         font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 19px;
     }
 
     h1 {
         font-size: 28px;
+    }
+
+    .hero-quote {
+        font-size: 18px;
+        margin-bottom: 24px;
     }
 }

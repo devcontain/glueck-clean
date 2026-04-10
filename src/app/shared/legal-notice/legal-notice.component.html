@@ -1,8 +1,7 @@
-<section>
+<section class="fade-page">
     <div class="back-button-pos">
-        <button class="b-left" (click)="back()">
-            <img class="left-arrow" [src]="leftArrowSrc" (mouseenter)="onLeftEnter()" (mouseleave)="onLeftLeave()"
-                alt="left">
+        <button class="b-left" type="button" (click)="back()" aria-label="Zurück zur Startseite">
+            <app-yellow-arrow-left></app-yellow-arrow-left>
         </button>
     </div>
 
@@ -79,10 +78,12 @@
 
         <p>{{ language.legalNotice.s14Subtitle }}</p>
         <p>{{ language.legalNotice.s14Intro }}</p>
-        <li>{{ language.legalNotice.s14Li1 }}</li><br>
-        <li>{{ language.legalNotice.s14Li2 }}</li><br>
-        <li>{{ language.legalNotice.s14Li3 }}</li><br>
-        <li>{{ language.legalNotice.s14Li4 }}</li>
+        <ul>
+            <li>{{ language.legalNotice.s14Li1 }}</li>
+            <li>{{ language.legalNotice.s14Li2 }}</li>
+            <li>{{ language.legalNotice.s14Li3 }}</li>
+            <li>{{ language.legalNotice.s14Li4 }}</li>
+        </ul>
         <p>{{ language.legalNotice.s14Outro }}</p>
 
         <p>{{ language.legalNotice.s15Subtitle }}</p>

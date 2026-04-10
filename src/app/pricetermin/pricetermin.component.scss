@@ -2,64 +2,93 @@
 
 section.main-section {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background-color: $c-bg;
-    padding-top: $page-content;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: $background-mainpage;
+    padding: $page-content 20px;
     box-sizing: border-box;
 
-    > div.main-content-positon {
+    >div.main-content-positon {
         width: 1500px;
         max-width: 100%;
         padding: 20px;
-        border-radius: 10px;
         text-align: center;
         box-sizing: border-box;
     }
 }
 
+h1 {
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 46px;
+    line-height: 1.6;
+    font-weight: bolder;
+    color: $header-colors;
+}
+
 .main-context {
-    width: 100%;
-}
-
-.text-container-wrapper {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-.p-txt {
-    padding: 18px;
-    border-radius: 10px;
-    background-color: #D0AA86;
-    text-align: left;
-    min-height: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    box-sizing: border-box;
+    gap: 18px;
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .home-paragraph {
-    margin: 0 0 12px 0;
+    margin: 0;
     font-family: "Open Sans", Arial, sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 1.6;
 }
 
-.home-paragraph:last-child {
-    margin-bottom: 0;
+.block-title {
+    margin-top: 6px;
+    font-size: 24px;
+    color: $header-colors;
+}
+
+.schedule-block {
+    align-items: center;
+    gap: 8px;
+}
+
+.schedule-line-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.schedule-line {
+    width: 260px;
+    text-align: left;
+    font-size: 21px;
+    color: $earth-warm;
+}
+
+.price-line {
+    color: $earth-warm;
+}
+
+.notice-block .block-title {
+    color: $earth-warm;
+}
+
+.process-line {
+    padding-left: 10px;
+    border-left: 3px solid rgba(145, 163, 99, 0.35);
 }
 
 @media (max-width: 900px) {
-    .text-container-wrapper {
-        grid-template-columns: 1fr;
+    h1 {
+        font-size: 34px;
     }
 }
 
@@ -68,16 +97,24 @@ section.main-section {
         padding-left: 12px;
         padding-right: 12px;
 
-        > div.main-content-positon {
+        >div.main-content-positon {
             padding: 12px;
         }
     }
 
-    .p-txt {
-        padding: 14px;
-    }
-
     .home-paragraph {
         font-size: 16px;
+    }
+
+    .block-title {
+        font-size: 20px;
+    }
+
+    .schedule-line {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 28px;
     }
 }

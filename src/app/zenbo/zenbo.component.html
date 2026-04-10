@@ -2,29 +2,24 @@
     <h1>{{ language.bewegung.titel }}</h1>
 
     @if (language.bewegung.containers.length > 0) {
-    <div class="p-txt first-container">
-        @for (paragraph of language.bewegung.containers[0]; track $index) {
-        <p class="bewegung-paragraph first-paragraph">
-            {{ paragraph }}
-        </p>
-        }
-    </div>
+    <p class="hero-quote">
+        {{ language.bewegung.containers[0][0] }}
+    </p>
     }
 
     <div class="bewegung-content-positon">
-        <!-- <button type="button" (click)="language.toggleLanguage()">Change Language</button> -->
-
         <div class="bewegung-context">
             <div class="text-container-wrapper">
                 @for (container of language.bewegung.containers; track $index) {
                 @if ($index > 0) {
-                <div class="p-txt">
+                <article class="p-txt" [class.card-intro]="$index === 1" [class.card-focus]="$index === 2"
+                    [class.card-flow]="$index === 3">
                     @for (paragraph of container; track $index) {
                     <p class="bewegung-paragraph">
                         {{ paragraph }}
                     </p>
                     }
-                </div>
+                </article>
                 }
                 }
             </div>

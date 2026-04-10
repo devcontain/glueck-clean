@@ -1,4 +1,4 @@
-$c-bg: #efe7da;
+$background-mainpage: #efe7da;
 $background-header: #E1DACA;
 $c-fg: #ffffffcc;
 $c-accent: #3DCFB6;
@@ -40,8 +40,8 @@ $page-content: 32px;
 
 .fade-page {
     opacity: 0;
-    transform: translateY(-8px);
-    animation: fadePageIn 800ms ease-out forwards;
+    transform: translateY(-6px);
+    animation: fadePageIn 600ms ease-out forwards;
 }
 
 @keyframes fadePageIn {

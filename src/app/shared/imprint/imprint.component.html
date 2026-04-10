@@ -1,8 +1,7 @@
-<section>
+<section class="fade-page">
     <div class="back-button-pos">
-        <button class="b-left" (click)="back()">
-            <img class="left-arrow" [src]="leftArrowSrc" (mouseenter)="onLeftEnter()" (mouseleave)="onLeftLeave()"
-                alt="left">
+        <button class="b-left" type="button" (click)="back()" aria-label="Zurück zur Startseite">
+            <app-yellow-arrow-left></app-yellow-arrow-left>
         </button>
     </div>
 
@@ -55,7 +54,6 @@
         <a [href]="language.imprint.generatorUrl" target="_blank" rel="noopener">
             {{ language.imprint.generatorName }}
         </a>
-        {{ language.imprint.toggleValue }}
         <span>der</span>
         <a [href]="language.imprint.lawfirmUrl" target="_blank" rel="noopener">
             {{ language.imprint.lawfirmName }}

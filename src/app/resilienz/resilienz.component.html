@@ -1,19 +1,40 @@
 <section class="main-section fade-page">
     <h1>{{ language.resilience.titel }}</h1>
+
+    @if (language.resilience.containers.length > 0) {
+    <p class="hero-quote">
+        {{ language.resilience.containers[0][0] }}
+    </p>
+    }
+
     <div class="main-content-positon">
-        <!-- <button type="button" (click)="language.toggleLanguage()">Change Language</button> -->
-
         <div class="main-context">
-
             <div class="text-container-wrapper">
                 @for (container of language.resilience.containers; track $index) {
-                <div class="p-txt">
+                @if ($index > 0) {
+                <article class="p-txt" [class.card-intro]="$index === 1" [class.card-balance]="$index === 2"
+                    [class.card-topics]="$index === 3" [class.card-philosophy]="$index === 4"
+                    [class.card-process]="$index === 5">
+                    @if ($index === 3) {
+                    <p class="home-paragraph section-title">
+                        {{ container[0] }}
+                    </p>
+                    <ul class="topic-list">
+                        @for (paragraph of container; track $index) {
+                        @if ($index > 0) {
+                        <li>{{ paragraph }}</li>
+                        }
+                        }
+                    </ul>
+                    } @else {
                     @for (paragraph of container; track $index) {
-                    <p class="home-paragraph">
+                    <p class="home-paragraph" [class.section-title]="$index === 0">
                         {{ paragraph }}
                     </p>
                     }
-                </div>
+                    }
+                </article>
+                }
                 }
             </div>
         </div>

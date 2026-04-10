@@ -1,14 +1,21 @@
 <section class="main-section fade-page">
-    <h1>{{ language.aboutme.titel }}</h1>
-    <div class="main-content-positon">
-        <!--         <button type="button" (click)="language.toggleLanguage()">Change Language
-        </button> -->
-        <div class="main-context">
-            @for (paragraph of language.aboutme.paragraphs; track $index) {
-            <p class="home-paragraph">
-                {{ paragraph }}
-            </p>
-            }
+    <div class="about-layout">
+        <h1>{{ language.aboutme.titel }}</h1>
+
+        <div class="main-content-positon">
+            <div class="photo-placeholder" aria-label="Foto Platzhalter">
+                <div class="photo-placeholder-inner">
+                    <span>Foto</span>
+                </div>
+            </div>
+
+            <div class="main-context">
+                @for (paragraph of language.aboutme.paragraphs; track $index) {
+                <p class="home-paragraph">
+                    {{ paragraph }}
+                </p>
+                }
+            </div>
         </div>
     </div>
 </section>

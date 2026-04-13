@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 $scrollbar-main: #803a21; // Headerfarbe
@@ -30,4 +31,17 @@ $scrollbar-hover: #5f2b18; // dunkler beim Hover
 html {
   scrollbar-width: thin;
   scrollbar-color: $scrollbar-main $scrollbar-track;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
 }

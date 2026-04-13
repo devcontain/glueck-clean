@@ -10,6 +10,9 @@ section.main-section {
     background-color: $background-mainpage;
     padding-top: $page-content;
     padding-bottom: $page-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 
     >div.main-content-positon {
         width: 1500px;
@@ -30,6 +33,14 @@ section.main-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.hero-art-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
 }
 
 h1 {
@@ -48,30 +59,22 @@ img {
 }
 
 .text-container-wrapper {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 24px;
 }
 
 .first-container {
-    height: 400px;
     width: 100%;
-    /*     padding: 32px; */
-    /*     border-radius: 16px; */
-    /*     background: rgba(255, 255, 255, 0.08);
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
+    padding: 0 20px;
     text-align: center;
-    background-image: url('../../assets/img/sunset_txt_highlight.jpg');
-    background-repeat: no-repeat;
-    background-size: auto;
 }
 
 .first-paragraph {
-    padding-top: 116px;
+    padding-top: 0;
     font-size: 24px;
     font-weight: 700;
-    /*     line-height: 1.4; */
 }
 
 .home-paragraph {
@@ -87,11 +90,62 @@ img {
 }
 
 @media (max-width: 900px) {
+    section.main-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
     .text-container-wrapper {
         grid-template-columns: 1fr;
     }
 
-    img {
-        height: 220px;
+    .first-paragraph {
+        font-size: 22px;
+    }
+
+    .home-paragraph {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 600px) {
+    section.main-section {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    section.main-section>div.main-content-positon {
+        padding: 16px;
+        margin-top: 24px;
+    }
+
+    .text-container-wrapper {
+        gap: 18px;
+    }
+
+    .hero-art-wrapper {
+        margin-bottom: 18px;
+    }
+
+    .first-container {
+        padding: 0;
+    }
+
+    .first-paragraph {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .home-paragraph {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 400px) {
+    section.main-section>div.main-content-positon {
+        padding: 14px;
     }
 }

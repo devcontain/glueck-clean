@@ -38,6 +38,7 @@ h1 {
 .hero-quote {
     width: min(980px, 100%);
     margin: 16px 0 32px;
+    padding-inline: 12px;
     text-align: center;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 24px;
@@ -51,13 +52,13 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
+    align-items: start;
 }
 
 .p-txt {
     padding: 24px 26px;
     border-radius: 10px;
     text-align: left;
-    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -70,10 +71,12 @@ h1 {
 
 .card-intro {
     background: linear-gradient(180deg, #e8dfcf 0%, #ddd4c1 100%);
+    grid-column: 1 / -1;
 }
 
-.card-balance {
+.card-everyday {
     background: linear-gradient(180deg, #d7e0cd 0%, #c8d3bc 100%);
+    grid-column: 1 / -1;
 }
 
 .card-topics {
@@ -86,6 +89,7 @@ h1 {
 
 .card-process {
     background: linear-gradient(180deg, #d7c2a7 0%, #ccb090 100%);
+    grid-column: 1 / -1;
 }
 
 .home-paragraph {
@@ -115,9 +119,20 @@ h1 {
     color: $text-main;
 }
 
+.topic-list li::marker {
+    color: $header-colors;
+    font-weight: 700;
+}
+
 @media (max-width: 900px) {
+    section.main-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
     .text-container-wrapper {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     h1 {
@@ -126,6 +141,13 @@ h1 {
 
     .hero-quote {
         font-size: 21px;
+        margin-bottom: 28px;
+    }
+
+    .card-intro,
+    .card-everyday,
+    .card-process {
+        grid-column: auto;
     }
 }
 
@@ -133,15 +155,19 @@ h1 {
     section.main-section {
         padding-left: 12px;
         padding-right: 12px;
+        padding-top: 56px;
+        padding-bottom: 56px;
     }
 
     .p-txt {
         padding: 18px;
+        gap: 10px;
     }
 
     .home-paragraph,
     .topic-list {
         font-size: 16px;
+        line-height: 1.6;
     }
 
     .section-title {
@@ -155,5 +181,26 @@ h1 {
     .hero-quote {
         font-size: 18px;
         margin-bottom: 24px;
+        padding-inline: 0;
+    }
+
+    .topic-list {
+        padding-left: 20px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .text-container-wrapper {
+        gap: 16px;
+    }
+
+    .p-txt {
+        padding: 16px 14px;
+    }
+
+    .hero-quote {
+        font-size: 17px;
+        line-height: 1.5;
     }
 }

@@ -12,7 +12,7 @@
             <div class="text-container-wrapper">
                 @for (container of language.resilience.containers; track $index) {
                 @if ($index > 0) {
-                <article class="p-txt" [class.card-intro]="$index === 1" [class.card-balance]="$index === 2"
+                <article class="p-txt" [class.card-intro]="$index === 1" [class.card-everyday]="$index === 2"
                     [class.card-topics]="$index === 3" [class.card-philosophy]="$index === 4"
                     [class.card-process]="$index === 5">
                     @if ($index === 3) {

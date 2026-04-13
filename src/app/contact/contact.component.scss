@@ -6,20 +6,21 @@ section.main-section {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $background-mainpage;
-    padding-top: $page-content;
+    padding: $page-content 20px 72px;
+    box-sizing: border-box;
 
     >div.main-content-positon {
-/*         height: 300px; */
         width: 1500px;
+        max-width: 100%;
         padding: 20px;
-        /* Leicht transparenter weißer Kasten für den Text */
         text-align: center;
     }
 }
 
 h1 {
+    margin: 0 0 20px;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 46px;
     line-height: 1.6;
@@ -38,7 +39,8 @@ p {
 .main-context {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+    width: 100%;
 }
 
 .intro-line {
@@ -59,4 +61,48 @@ p {
 
 .note-line {
     margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+    section.main-section {
+        padding-top: 72px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+    section.main-section {
+        padding: 56px 12px 48px;
+
+        >div.main-content-positon {
+            padding: 16px;
+        }
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .person-line {
+        font-size: 21px;
+    }
+
+    .contact-line {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    section.main-section>div.main-content-positon {
+        padding: 14px;
+    }
 }

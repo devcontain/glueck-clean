@@ -81,6 +81,11 @@ h1 {
 }
 
 @media (max-width: 1000px) {
+    section.main-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
     .main-content-positon {
         grid-template-columns: 1fr;
     }
@@ -100,6 +105,8 @@ h1 {
     section.main-section {
         padding-left: 12px;
         padding-right: 12px;
+        padding-top: 56px;
+        padding-bottom: 56px;
     }
 
     .photo-placeholder,
@@ -121,5 +128,20 @@ h1 {
 
     h1 {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-content-positon {
+        gap: 16px;
+    }
+
+    .photo-placeholder,
+    .main-context {
+        padding: 14px;
+    }
+
+    .photo-placeholder {
+        min-height: 220px;
     }
 }

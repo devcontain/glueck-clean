@@ -117,6 +117,11 @@ h1 {
 }
 
 @media (max-width: 900px) {
+    section.main-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
     h1 {
         font-size: 34px;
     }
@@ -148,5 +153,25 @@ h1 {
 
     h1 {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    section.main-section>div.main-content-positon {
+        padding: 8px;
+    }
+
+    .main-context {
+        gap: 14px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .block-title {
+        font-size: 18px;
     }
 }

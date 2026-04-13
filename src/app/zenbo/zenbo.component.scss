@@ -30,12 +30,23 @@ h1 {
 .hero-quote {
     width: min(980px, 100%);
     margin: 16px 0 32px;
+    padding: 110px 28px 48px;
     text-align: center;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 24px;
     line-height: 1.5;
     font-weight: 700;
     color: $earth-warm;
+    box-sizing: border-box;
+}
+
+.quote-highlight {
+    min-height: 400px;
+    background-image: url('../../assets/img/sunset_txt_highlight.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
 }
 
 .bewegung-context {
@@ -64,7 +75,9 @@ h1 {
 }
 
 .card-intro {
-    background: linear-gradient(180deg, #efe2c8 0%, #e7d6b7 100%);
+    background: linear-gradient(180deg, #eaa260 0%, #c99769 100%);
+    grid-column: 1 / -1;
+    min-height: auto;
 }
 
 .card-focus {
@@ -72,7 +85,7 @@ h1 {
 }
 
 .card-flow {
-    background: linear-gradient(180deg, #d0aa86 0%, #c99769 100%);
+    background: linear-gradient(180deg, #d9e1c8 0%, #cfd8be 100%);
 }
 
 .bewegung-paragraph {
@@ -95,6 +108,7 @@ h1 {
 
     .hero-quote {
         font-size: 21px;
+        padding: 90px 22px 36px;
     }
 }
 
@@ -119,5 +133,30 @@ h1 {
     .hero-quote {
         font-size: 18px;
         margin-bottom: 24px;
+        padding: 72px 18px 28px;
+    }
+
+    .quote-highlight {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .text-container-wrapper {
+        gap: 16px;
+    }
+
+    .p-txt {
+        padding: 16px 14px;
+    }
+
+    .hero-quote {
+        font-size: 17px;
+        line-height: 1.5;
+        padding: 64px 14px 24px;
+    }
+
+    .quote-highlight {
+        min-height: 260px;
     }
 }

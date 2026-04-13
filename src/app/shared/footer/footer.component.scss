@@ -16,15 +16,17 @@ body {
 
 section {
   @include display(flex, null, null, row);
-  @include position($h: 310px);
+  @include position($h: auto);
   flex: 1 1 auto;
   max-width: 1920px;
   color: $c-fg;
+  padding: 32px 0 24px;
 
   >div {
     @include display(flex, space-around, center, row);
     width: 100%;
     padding-bottom: 32px;
+    gap: 24px;
 
     >span {
       @include display(flex, flex-end);
@@ -40,6 +42,7 @@ section {
     >div.place-logo {
       @include display(flex, flex-end, flex-start, column);
       width: 668px;
+      gap: 12px;
 
       >button.logos {
         display: flex;
@@ -48,10 +51,10 @@ section {
 
       >span {
         font-family: var(--ff-karla);
-        font-size: 16px;
+        font-size: 18px;
         line-height: 19.2px;
         text-align: left;
-        color: #fff;
+        color: $sun;
       }
 
       >span:hover {
@@ -106,11 +109,11 @@ span:hover img {
 .logos {
   all: unset;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 200px;
+  width: 148px;
+  height: 148px;
 }
 
 .logos:hover app-logo,
@@ -139,39 +142,64 @@ span:hover img {
 @include respond(720px) {
   section {
     height: auto;
-    min-height: 388px;
+    min-height: 0;
+    padding: 24px 0 20px;
 
     >div {
-      @include display(flex, space-around, center, row);
+      @include display(flex, space-around, center, column);
+      gap: 18px;
+      padding-bottom: 0;
 
       >span {
-        margin-top: 290px;
+        position: static;
+        width: auto;
+        height: auto;
+        order: 3;
+      }
+
+      >div.place-logo,
+      >div.place-links {
+        width: 100%;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      >div.place-logo {
+        >button.logos {
+          padding-top: 0;
+        }
+
+        >span {
+          text-align: center;
+        }
+      }
+
+      >div.place-links {
+        >div {
+          width: 100%;
+          justify-content: center;
+        }
       }
     }
   }
 }
 
 @include respond(500px) {
-  .place-logo {
-    padding-left: 12px;
-  }
-
-  .place-links {
-    padding-right: 0px;
-  }
-
-  .logo {
-    width: 170px;
-    height: 0px;
-    padding-bottom: 128px;
+  .logos {
+    width: 104px;
+    height: 104px;
   }
 
   section {
     >div {
+      gap: 14px;
+
       >div.place-links {
         >div {
           >a {
-            width: 112px;
+            width: auto;
+            justify-content: center;
           }
         }
       }

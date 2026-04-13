@@ -8,6 +8,11 @@ interface PriceSection {
   type: PriceSectionType;
 }
 
+interface ScheduleRow {
+  day: string;
+  time: string;
+}
+
 @Component({
   selector: 'app-pricetermin',
   standalone: true,
@@ -23,6 +28,26 @@ export class PriceterminComponent {
       paragraphs,
       type: this.getSectionType(index)
     }));
+  }
+
+  get scheduleRows(): ScheduleRow[] {
+    const scheduleParagraphs = this.language.pricesdate.containers[2] ?? [];
+
+    return scheduleParagraphs.map((entry) => {
+      const separatorIndex = entry.indexOf(':');
+
+      if (separatorIndex === -1) {
+        return {
+          day: '',
+          time: entry
+        };
+      }
+
+      return {
+        day: entry.slice(0, separatorIndex).trim(),
+        time: entry.slice(separatorIndex + 1).trim()
+      };
+    });
   }
 
   private getSectionType(index: number): PriceSectionType {

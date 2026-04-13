@@ -1,6 +1,5 @@
 <section class="main-section fade-page">
     <div class="about-layout">
-        <h1>{{ language.aboutme.titel }}</h1>
 
         <div class="main-content-positon">
             <div class="photo-placeholder" aria-label="Foto Platzhalter">
@@ -9,12 +8,15 @@
                 </div>
             </div>
 
-            <div class="main-context">
-                @for (paragraph of language.aboutme.paragraphs; track $index) {
-                <p class="home-paragraph">
-                    {{ paragraph }}
-                </p>
-                }
+            <div>
+                <h1>{{ language.aboutme.titel }}</h1>
+                <div class="main-context">
+                    @for (paragraph of language.aboutme.paragraphs; track $index) {
+                    <p class="home-paragraph">
+                        {{ paragraph }}
+                    </p>
+                    }
+                </div>
             </div>
         </div>
     </div>

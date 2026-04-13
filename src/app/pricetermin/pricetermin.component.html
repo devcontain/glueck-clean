@@ -6,13 +6,24 @@
             <div class="text-block" [class.schedule-block]="section.type === 'schedule'"
                 [class.notice-block]="section.type === 'notice'">
                 @if (section.type === 'schedule') {
-                @for (paragraph of section.paragraphs; track paragraph) {
-                <div class="schedule-line-wrap">
-                    <p class="home-paragraph schedule-line">
-                        {{ paragraph }}
-                    </p>
+                <div class="schedule-table-wrap">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Zeit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (row of scheduleRows; track row.day + row.time) {
+                            <tr>
+                                <td>{{ row.day }}</td>
+                                <td>{{ row.time }}</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
-                }
                 } @else {
                 @for (paragraph of section.paragraphs; track paragraph; let paragraphIndex = $index) {
                 <p class="home-paragraph" [class.block-title]="paragraphIndex === 0"

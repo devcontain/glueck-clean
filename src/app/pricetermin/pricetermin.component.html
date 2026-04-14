@@ -2,10 +2,10 @@
     <h1>{{ language.pricesdate.titel }}</h1>
     <div class="main-content-positon">
         <div class="main-context">
-            @for (section of sections; track section.paragraphs) {
-            <div class="text-block" [class.schedule-block]="section.type === 'schedule'"
-                [class.notice-block]="section.type === 'notice'">
-                @if (section.type === 'schedule') {
+            @for (block of blocks; track block.paragraphs) {
+            <div class="text-block" [class.schedule-block]="block.type === 'schedule'"
+                [class.notice-block]="block.type === 'notice'">
+                @if (block.type === 'schedule') {
                 <div class="schedule-table-wrap">
                     <table class="schedule-table">
                         <thead>
@@ -15,7 +15,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @for (row of scheduleRows; track row.day + row.time) {
+                            @for (row of times; track row.day + row.time) {
                             <tr>
                                 <td>{{ row.day }}</td>
                                 <td>{{ row.time }}</td>
@@ -25,10 +25,10 @@
                     </table>
                 </div>
                 } @else {
-                @for (paragraph of section.paragraphs; track paragraph; let paragraphIndex = $index) {
+                @for (paragraph of block.paragraphs; track paragraph; let paragraphIndex = $index) {
                 <p class="home-paragraph" [class.block-title]="paragraphIndex === 0"
-                    [class.price-line]="section.type === 'prices' && paragraphIndex > 0"
-                    [class.process-line]="section.type === 'process' && paragraphIndex > 0">
+                    [class.price-line]="block.type === 'prices' && paragraphIndex > 0"
+                    [class.process-line]="block.type === 'process' && paragraphIndex > 0">
                     {{ paragraph }}
                 </p>
                 }

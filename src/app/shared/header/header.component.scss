@@ -10,7 +10,7 @@ section {
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 20;
+    z-index: 2;
     color: $c-fg;
     background-color: $background-header;
 
@@ -125,6 +125,10 @@ section {
     display: none;
 }
 
+.close_menu {
+    display: none;
+}
+
 .bar {
     display: block;
     width: 28px;
@@ -160,7 +164,14 @@ section {
         flex-direction: column;
         justify-content: center;
         cursor: pointer;
-        z-index: 30;
+        z-index: 5;
+    }
+
+    .close_menu {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 3;
     }
 
     .menu {
@@ -182,6 +193,7 @@ section {
         border-radius: 16px;
         background: rgba(0, 0, 0, 0.85);
         backdrop-filter: blur(8px);
+        z-index: 4;
     }
 
     .menu nav a {
@@ -191,6 +203,10 @@ section {
 
     #toggle_button:checked~.menu nav {
         display: flex;
+    }
+
+    #toggle_button:checked~.close_menu {
+        display: block;
     }
 
     .second {

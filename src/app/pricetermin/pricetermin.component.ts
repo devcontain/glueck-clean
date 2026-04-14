@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { LanguageService } from '../shared/language.service';
 
-type PriceSectionType = 'default' | 'schedule' | 'prices' | 'notice' | 'process';
+type BlockType = 'default' | 'schedule' | 'prices' | 'notice' | 'process';
 
-interface PriceSection {
+interface TextBlock {
   paragraphs: string[];
-  type: PriceSectionType;
+  type: BlockType;
 }
 
-interface ScheduleRow {
+interface TimeRow {
   day: string;
   time: string;
 }
@@ -23,20 +23,20 @@ interface ScheduleRow {
 export class PriceterminComponent {
   constructor(public language: LanguageService) { }
 
-  get sections(): PriceSection[] {
+  get blocks(): TextBlock[] {
     return this.language.pricesdate.containers.map((paragraphs, index) => ({
       paragraphs,
-      type: this.getSectionType(index)
+      type: this.getType(index)
     }));
   }
 
-  get scheduleRows(): ScheduleRow[] {
-    const scheduleParagraphs = this.language.pricesdate.containers[2] ?? [];
+  get times(): TimeRow[] {
+    const text = this.language.pricesdate.containers[2] ?? [];
 
-    return scheduleParagraphs.map((entry) => {
-      const separatorIndex = entry.indexOf(':');
+    return text.map((entry) => {
+      const split = entry.indexOf(':');
 
-      if (separatorIndex === -1) {
+      if (split === -1) {
         return {
           day: '',
           time: entry
@@ -44,13 +44,13 @@ export class PriceterminComponent {
       }
 
       return {
-        day: entry.slice(0, separatorIndex).trim(),
-        time: entry.slice(separatorIndex + 1).trim()
+        day: entry.slice(0, split).trim(),
+        time: entry.slice(split + 1).trim()
       };
     });
   }
 
-  private getSectionType(index: number): PriceSectionType {
+  private getType(index: number): BlockType {
     if (index === 2) {
       return 'schedule';
     }

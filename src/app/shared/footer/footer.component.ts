@@ -14,19 +14,16 @@ import { LogoComponent } from '../svg/logo/logo.component';
 export class FooterComponent {
 
   constructor(
-    public languageService: LanguageService,
+    public language: LanguageService,
     private router: Router
   ) {
     this.router.events.pipe(
-      filter(e => e instanceof NavigationEnd)
+      filter((event) => event instanceof NavigationEnd)
     ).subscribe(() => {
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     });
   }
 
-  /**
- * Scroll to bottom of page
- */
   back(): void {
     const isHome = this.router.url === '/';
 

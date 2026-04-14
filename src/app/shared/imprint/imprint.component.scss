@@ -7,9 +7,13 @@
     flex-direction: $f;
 }
 
-@mixin position($p: absolute, $z: 99, $h: 100%, $w: 100%) {
+@mixin position($p: absolute, $z: null, $h: 100%, $w: 100%) {
     position: $p;
-    z-index: $z;
+
+    @if $z {
+        z-index: $z;
+    }
+
     height: $h;
     width: $w;
 }
@@ -83,7 +87,7 @@ section {
     max-width: 1590px;
     position: sticky;
     top: 100px;
-    z-index: 20;
+    z-index: 1;
 }
 
 button {

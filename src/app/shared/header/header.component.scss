@@ -25,31 +25,28 @@ section {
 }
 
 .background-color {
-    display: flex;
-    justify-content: center;
     background: $background-mainpage;
 }
 
 .contentmax {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
+/*     max-width: 1440px; */
     min-height: 132px;
-    margin: 0 auto;
-    padding: 0 32px;
-    gap: 32px;
+/*     margin: 0 auto; */
+/*     padding: 0 32px; */
+/*     gap: 32px; */
 }
 
-.menu {
-    flex: 1 1 auto;
+/* .menu {
     display: flex;
     align-items: center;
-    justify-content: end;
     min-width: 0;
 }
-
+ */
 .menu nav {
     display: flex;
     align-items: center;
@@ -60,7 +57,6 @@ section {
 .menu nav a {
     cursor: pointer;
     text-decoration: none;
-    /*     color: rgb(223, 204, 204); */
     color: $nav-menu-color;
     white-space: nowrap;
     transition: opacity 0.4s ease;
@@ -73,7 +69,6 @@ section {
 
 .menu nav a:hover,
 .menu nav a:focus-visible {
-    /*     opacity: 0.75; */
     color: $nav-hover-color;
 }
 
@@ -81,13 +76,13 @@ section {
     color: $nav-hover-color;
 }
 
-.second {
+/* .second {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-}
+} */
 
 .logos {
     all: unset;
@@ -174,9 +169,9 @@ section {
         z-index: 3;
     }
 
-    .menu {
+/*     .menu {
         flex: 0 1 auto;
-    }
+    } */
 
     .menu nav {
         position: absolute;
@@ -219,7 +214,6 @@ section {
     .contentmax {
         padding: 0 16px;
         min-height: 76px;
-        gap: 14px;
     }
 
     .menu nav {

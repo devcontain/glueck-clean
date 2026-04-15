@@ -67,7 +67,6 @@ h1 {
     gap: 12px;
     padding: 24px 26px;
     border-radius: 10px;
-    background-color: #edeae5;
     border: 1px solid rgba(0, 0, 0, 0.10);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
     min-height: 180px;
@@ -75,17 +74,17 @@ h1 {
 }
 
 .card-intro {
-    background: linear-gradient(180deg, #eaa260 0%, #c99769 100%);
+    background: $background-content;
     grid-column: 1 / -1;
     min-height: auto;
 }
 
 .card-focus {
-    background: linear-gradient(180deg, #d9e1c8 0%, #cfd8be 100%);
+    background: $background-content;
 }
 
 .card-flow {
-    background: linear-gradient(180deg, #d9e1c8 0%, #cfd8be 100%);
+    background: $background-content;
 }
 
 .bewegung-paragraph {

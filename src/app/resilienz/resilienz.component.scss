@@ -66,29 +66,28 @@ h1 {
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.10);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
-    background-color: #edeae5;
 }
 
 .card-intro {
-    background: linear-gradient(180deg, #e8dfcf 0%, #ddd4c1 100%);
+    background: $background-content;
     grid-column: 1 / -1;
 }
 
 .card-everyday {
-    background: linear-gradient(180deg, #d7e0cd 0%, #c8d3bc 100%);
+    background: $background-content;
     grid-column: 1 / -1;
 }
 
 .card-topics {
-    background: linear-gradient(180deg, #cfd9c8 0%, #c3cfbd 100%);
+    background: $background-content;
 }
 
 .card-philosophy {
-    background: linear-gradient(180deg, #eadfce 0%, #e1d1b9 100%);
+    background: $background-content;
 }
 
 .card-process {
-    background: linear-gradient(180deg, #d7c2a7 0%, #ccb090 100%);
+    background: $background-content;
     grid-column: 1 / -1;
 }
 

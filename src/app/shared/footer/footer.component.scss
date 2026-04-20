@@ -11,26 +11,33 @@ body {
 section {
   @include display(flex, null, null, row);
   @include position($h: auto);
+  position: relative;
 /*   flex: 1 1 auto; */
   max-width: 1920px;
-  padding: 32px 0 24px;
+  padding: 32px 0 44px;
   background: $background-mainpage;
   color: $c-fg;
+  overflow: hidden;
 
-  >div {
+  >div:not(.footer-lavender) {
     @include display(flex, space-around, center, row);
+    position: relative;
+    z-index: 1;
     width: 100%;
     padding-bottom: 32px;
     gap: 24px;
 
-    >span {
-      @include display(flex, flex-end);
+    >.footer-credit {
+      @include display(flex, center, center, column);
       @include position($p: absolute);
+      gap: 4px;
       color: $footer-hover;
       font-family: $ff-fira;
+      line-height: 1.4;
+      text-align: center;
     }
 
-    >span:hover {
+    >.footer-credit:hover {
       cursor: default;
     }
 
@@ -38,11 +45,6 @@ section {
       @include display(flex, flex-end, flex-start, column);
       width: 668px;
       gap: 12px;
-
-      >button.logos {
-        display: flex;
-        padding-top: 32px;
-      }
 
       >span {
         color: $sun;
@@ -69,23 +71,30 @@ section {
         >a {
           @include display(flex, flex-start, center);
           text-decoration: none;
-          width: 96px;
+          min-width: 140px;
           gap: 6px;
-          color: #fff;
-          font-family: $ff-fira;
+          color: $nav-menu-color;
+          font-family: $ff-open-sans;
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 1.6;
+          transition: color 0.4s ease;
 
           >img.green-point {
-            @include position($h: 8px, $w: 8px);
+            @include position($h: 16px, $w: 16px);
+            object-fit: contain;
             visibility: hidden;
           }
         }
 
-        >a:hover {
-          color: $footer-hover;
+        >a:hover,
+        >a:focus-visible {
+          color: $nav-hover-color;
           cursor: pointer;
         }
 
-        >a:hover img.green-point {
+        >a:hover img.green-point,
+        >a:focus-visible img.green-point {
           visibility: visible;
         }
       }
@@ -97,27 +106,56 @@ section {
   }
 }
 
-span:hover img {
-  visibility: hidden;
+.footer-lavender {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 0;
+  pointer-events: none;
+  height: 112px;
 }
 
-.logos {
-  all: unset;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 148px;
-  height: 148px;
+.lavender {
+  position: absolute;
+  bottom: -12px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.86;
 }
 
-.logos:hover app-logo,
-.logos:focus-visible app-logo {
-  --logo-hover-opacity: 0.31;
+.lavender-1 {
+  left: 2%;
+  height: 100px;
 }
 
-.logos:hover {
-  cursor: pointer;
+.lavender-2 {
+  left: 15%;
+  height: 106px;
+}
+
+.lavender-3 {
+  left: 30%;
+  height: 94px;
+}
+
+.lavender-4 {
+  left: 50%;
+  height: 108px;
+  transform: translateX(-50%);
+}
+
+.lavender-5 {
+  right: 31%;
+  height: 98px;
+}
+
+.lavender-6 {
+  right: 15%;
+  height: 104px;
+}
+
+.lavender-7 {
+  right: 2%;
+  height: 96px;
 }
 
 @include respond(1400px) {
@@ -134,14 +172,14 @@ span:hover img {
   section {
     height: auto;
     min-height: 0;
-    padding: 24px 0 20px;
+    padding: 24px 0 54px;
 
     >div {
       @include display(flex, space-around, center, column);
       gap: 18px;
       padding-bottom: 0;
 
-      >span {
+      >.footer-credit {
         position: static;
         width: auto;
         height: auto;
@@ -157,10 +195,6 @@ span:hover img {
       }
 
       >div.place-logo {
-        >button.logos {
-          padding-top: 0;
-        }
-
         >span {
           text-align: center;
         }
@@ -174,14 +208,47 @@ span:hover img {
       }
     }
   }
+
+  .footer-lavender {
+    height: 86px;
+  }
+
+  .lavender-1 {
+    left: -2%;
+    height: 72px;
+  }
+
+  .lavender-2 {
+    left: 12%;
+    height: 78px;
+  }
+
+  .lavender-3 {
+    left: 27%;
+    height: 68px;
+  }
+
+  .lavender-4 {
+    height: 80px;
+  }
+
+  .lavender-5 {
+    right: 27%;
+    height: 70px;
+  }
+
+  .lavender-6 {
+    right: 12%;
+    height: 76px;
+  }
+
+  .lavender-7 {
+    right: -2%;
+    height: 70px;
+  }
 }
 
 @include respond(500px) {
-  .logos {
-    width: 104px;
-    height: 104px;
-  }
-
   section {
     >div {
       gap: 14px;

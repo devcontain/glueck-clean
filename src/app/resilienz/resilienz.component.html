@@ -12,6 +12,20 @@
             <div class="text-container-wrapper">
                 @for (container of language.resilience.containers; track $index) {
                 @if ($index > 0) {
+                @if ($index === 4) {
+                <div class="philosophy-column">
+                    <article class="p-txt card-philosophy">
+                        @for (paragraph of container; track $index) {
+                        <p class="home-paragraph" [class.section-title]="$index === 0">
+                            {{ paragraph }}
+                        </p>
+                        }
+                    </article>
+                    <div class="philosophy-sunflower" aria-hidden="true">
+                        <img src="assets/img/sunflower_head.png" alt="">
+                    </div>
+                </div>
+                } @else {
                 <article class="p-txt" [class.card-intro]="$index === 1" [class.card-everyday]="$index === 2"
                     [class.card-topics]="$index === 3" [class.card-philosophy]="$index === 4"
                     [class.card-process]="$index === 5">
@@ -34,6 +48,7 @@
                     }
                     }
                 </article>
+                }
                 }
                 }
             </div>

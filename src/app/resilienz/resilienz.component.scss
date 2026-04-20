@@ -86,6 +86,30 @@ h1 {
     background: $background-content;
 }
 
+.philosophy-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.philosophy-column .card-philosophy {
+    width: 100%;
+}
+
+.philosophy-sunflower {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 220px;
+}
+
+.philosophy-sunflower img {
+    width: min(320px, 72%);
+    height: auto;
+    object-fit: contain;
+}
+
 .card-process {
     background: $background-content;
     grid-column: 1 / -1;
@@ -148,6 +172,15 @@ h1 {
     .card-process {
         grid-column: auto;
     }
+
+    .philosophy-sunflower {
+        min-height: 0;
+        padding: 4px 0 8px;
+    }
+
+    .philosophy-sunflower img {
+        width: min(260px, 58%);
+    }
 }
 
 @media (max-width: 600px) {
@@ -186,6 +219,10 @@ h1 {
     .topic-list {
         padding-left: 20px;
         gap: 8px;
+    }
+
+    .philosophy-sunflower img {
+        width: min(210px, 68%);
     }
 }
 

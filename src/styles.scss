@@ -50,6 +50,26 @@ body {
   overflow-x: hidden;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li,
+td,
+th {
+  cursor: default;
+}
+
+a,
+button,
+label {
+  cursor: pointer;
+}
+
 img,
 svg {
   max-width: 100%;

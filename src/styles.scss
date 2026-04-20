@@ -1,3 +1,13 @@
+@use './app/scss_global/global.style.scss' as *;
+
+@font-face {
+  font-family: "Casual Cursive";
+  src: url("#{$font-casual-cursive-src}") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;

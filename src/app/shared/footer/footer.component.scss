@@ -13,9 +13,9 @@ section {
   @include position($h: auto);
 /*   flex: 1 1 auto; */
   max-width: 1920px;
-  color: $c-fg;
   padding: 32px 0 24px;
   background: $background-mainpage;
+  color: $c-fg;
 
   >div {
     @include display(flex, space-around, center, row);
@@ -26,8 +26,8 @@ section {
     >span {
       @include display(flex, flex-end);
       @include position($p: absolute);
-      font-family: var(--ff-fira);
       color: $footer-hover;
+      font-family: $ff-fira;
     }
 
     >span:hover {
@@ -45,11 +45,11 @@ section {
       }
 
       >span {
-        font-family: var(--ff-karla);
+        color: $sun;
+        font-family: $ff-karla;
         font-size: 18px;
         line-height: 19.2px;
         text-align: left;
-        color: $sun;
       }
 
       >span:hover {
@@ -70,9 +70,9 @@ section {
           @include display(flex, flex-start, center);
           text-decoration: none;
           width: 96px;
-          color: #fff;
-          font-family: var(--ff-fira);
           gap: 6px;
+          color: #fff;
+          font-family: $ff-fira;
 
           >img.green-point {
             @include position($h: 8px, $w: 8px);

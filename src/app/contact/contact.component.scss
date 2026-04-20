@@ -21,18 +21,18 @@ section.main-section {
 
 h1 {
     margin: 0 0 20px;
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 46px;
-    line-height: 1.6;
-    font-weight: bolder;
     color: $header-colors;
+    font-family: $ff-open-sans;
+    font-size: 46px;
+    font-weight: bolder;
+    line-height: 1.6;
 }
 
 p {
     margin: 0;
-    font-family: "Open Sans", Arial, sans-serif;
-    font-weight: 700;
+    font-family: $ff-open-sans;
     font-size: 18px;
+    font-weight: 700;
     line-height: 1.6;
 }
 
@@ -83,8 +83,8 @@ p {
     }
 
     h1 {
-        font-size: 28px;
         margin-bottom: 16px;
+        font-size: 28px;
     }
 
     p {

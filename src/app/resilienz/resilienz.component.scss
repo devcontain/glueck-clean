@@ -1,5 +1,7 @@
 @use '../scss_global/global.style.scss' as *;
 
+$resilience-card-width: 760px;
+
 section.main-section {
     display: flex;
     justify-content: center;
@@ -8,13 +10,12 @@ section.main-section {
     width: 100%;
     min-height: 100vh;
     background-color: $background-mainpage;
-    padding: $page-content 20px;
+    padding: $page-content $layout-page-padding;
     box-sizing: border-box;
 }
 
 .main-content-positon {
-    width: 1500px;
-    max-width: 100%;
+    width: min($layout-max-width, 100%);
 }
 
 .main-context {
@@ -36,23 +37,25 @@ h1 {
 }
 
 .hero-quote {
-    width: min(980px, 100%);
+    width: min(1000px, 100%);
     margin: 16px 0 32px;
     padding-inline: 12px;
     color: $earth-warm;
-    font-family: $ff-open-sans;
-    font-size: 24px;
+    font-family: $ff-casual-cursive;
+    font-size: 34px;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
 }
 
 .text-container-wrapper {
+    position: relative;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 12px 0 28px;
+    overflow: hidden;
 }
 
 .p-txt {
@@ -68,51 +71,49 @@ h1 {
     text-align: left;
 }
 
+.timeline-card {
+    position: relative;
+    z-index: 1;
+    width: min($resilience-card-width, 62%);
+}
+
+.timeline-card + .timeline-card {
+    margin-top: -96px;
+}
+
+.side-left {
+    align-self: flex-start;
+}
+
+.side-right {
+    align-self: flex-end;
+}
+
 .card-intro {
+    order: 1;
     background: $background-content;
-    grid-column: 1 / -1;
 }
 
 .card-everyday {
+    order: 2;
     background: $background-content;
-    grid-column: 1 / -1;
 }
 
 .card-topics {
+    order: 4;
+    align-items: center;
     background: $background-content;
+    text-align: center;
 }
 
 .card-philosophy {
+    order: 3;
     background: $background-content;
-}
-
-.philosophy-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.philosophy-column .card-philosophy {
-    width: 100%;
-}
-
-.philosophy-sunflower {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 220px;
-}
-
-.philosophy-sunflower img {
-    width: min(320px, 72%);
-    height: auto;
-    object-fit: contain;
 }
 
 .card-process {
+    order: 5;
     background: $background-content;
-    grid-column: 1 / -1;
 }
 
 .home-paragraph {
@@ -129,9 +130,12 @@ h1 {
     font-size: 21px;
 }
 
+.centered-paragraph {
+    text-align: center;
+}
+
 .topic-list {
     margin: 0;
-    padding-left: 24px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -140,11 +144,48 @@ h1 {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.7;
+    text-align: center;
 }
 
-.topic-list li::marker {
-    color: $header-colors;
-    font-weight: 700;
+.topic-list p {
+    margin: 0;
+}
+
+.card-topics .section-title {
+    text-align: center;
+}
+
+.resilience-background-sunflower {
+    position: absolute;
+    right: 5%;
+    bottom: -36px;
+    z-index: 0;
+    width: min(430px, 34vw);
+    opacity: 0.72;
+    pointer-events: none;
+}
+
+@media (max-width: 1500px) {
+    .timeline-card {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .timeline-card + .timeline-card {
+        margin-top: 0;
+    }
+
+    .side-left,
+    .side-right {
+        align-self: stretch;
+    }
+
+    .resilience-background-sunflower {
+        right: 0;
+        bottom: 8px;
+        width: min(300px, 42vw);
+        opacity: 0.34;
+    }
 }
 
 @media (max-width: 900px) {
@@ -154,8 +195,14 @@ h1 {
     }
 
     .text-container-wrapper {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 24px;
+        padding-left: 48px;
+    }
+
+    .resilience-background-sunflower {
+        right: -22px;
+        width: 190px;
+        opacity: 0.26;
     }
 
     h1 {
@@ -167,26 +214,12 @@ h1 {
         margin-bottom: 28px;
     }
 
-    .card-intro,
-    .card-everyday,
-    .card-process {
-        grid-column: auto;
-    }
-
-    .philosophy-sunflower {
-        min-height: 0;
-        padding: 4px 0 8px;
-    }
-
-    .philosophy-sunflower img {
-        width: min(260px, 58%);
-    }
 }
 
 @media (max-width: 600px) {
     section.main-section {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: $layout-page-padding-mobile;
+        padding-right: $layout-page-padding-mobile;
         padding-top: 56px;
         padding-bottom: 56px;
     }
@@ -194,6 +227,15 @@ h1 {
     .p-txt {
         padding: 18px;
         gap: 10px;
+    }
+
+    .text-container-wrapper {
+        padding-left: 38px;
+    }
+
+    .resilience-background-sunflower {
+        right: -46px;
+        width: 150px;
     }
 
     .home-paragraph,
@@ -217,26 +259,7 @@ h1 {
     }
 
     .topic-list {
-        padding-left: 20px;
         gap: 8px;
     }
 
-    .philosophy-sunflower img {
-        width: min(210px, 68%);
-    }
-}
-
-@media (max-width: 400px) {
-    .text-container-wrapper {
-        gap: 16px;
-    }
-
-    .p-txt {
-        padding: 16px 14px;
-    }
-
-    .hero-quote {
-        font-size: 17px;
-        line-height: 1.5;
-    }
 }

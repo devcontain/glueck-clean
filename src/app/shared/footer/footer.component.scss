@@ -13,7 +13,7 @@ section {
   @include position($h: auto);
   position: relative;
 /*   flex: 1 1 auto; */
-  max-width: 1920px;
+  width: 100%;
   padding: 32px 0 44px;
   background: $background-mainpage;
   color: $c-fg;
@@ -23,7 +23,8 @@ section {
     @include display(flex, space-around, center, row);
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: min($layout-max-width, calc(100% - #{$layout-page-padding * 2}));
+    margin: 0 auto;
     padding-bottom: 32px;
     gap: 24px;
 
@@ -43,7 +44,7 @@ section {
 
     >div.place-logo {
       @include display(flex, flex-end, flex-start, column);
-      width: 668px;
+      flex: 1 1 0;
       gap: 12px;
 
       >span {
@@ -61,7 +62,7 @@ section {
 
     >div.place-links {
       @include display(flex, center, flex-end, column);
-      width: 568px;
+      flex: 1 1 0;
       gap: 10px;
 
       >div {
@@ -158,16 +159,6 @@ section {
   height: 96px;
 }
 
-@include respond(1400px) {
-  .place-links {
-    padding-right: 32px;
-  }
-
-  .place-logo {
-    padding-left: 32px;
-  }
-}
-
 @include respond(720px) {
   section {
     height: auto;
@@ -176,6 +167,7 @@ section {
 
     >div {
       @include display(flex, space-around, center, column);
+      width: calc(100% - #{$layout-page-padding-mobile * 2});
       gap: 18px;
       padding-bottom: 0;
 
@@ -189,9 +181,8 @@ section {
       >div.place-logo,
       >div.place-links {
         width: 100%;
+        flex: none;
         align-items: center;
-        padding-left: 16px;
-        padding-right: 16px;
       }
 
       >div.place-logo {

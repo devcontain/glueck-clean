@@ -90,7 +90,7 @@ export class LanguageService {
         '10. Glaubenssysteme und Überzeugungen – Wie entstehen innere Werte und Überzeugungsmuster?'
       ],
       [
-        'Philosophie',
+        'Die Philosophie',
         'Meine Herangehensweise ist lösungsorientiert. Ich arbeite nach dem Ansatz von Steve de Shazer. In Gesprächen erarbeiten wir gemeinsam, welche Wirkung bestimmte Gedanken und Verhaltensweisen haben. Dabei wird gleichzeitig klar, welche Gedanken und Verhaltensweisen Ihnen dabei helfen, Ihre Ziele zu erreichen.',
         'Es werden immer die Stärken und positiven Verhaltensmuster des Einzelnen zur weiteren Lösungskonstruktion genutzt, die neue Türen im Erkennen, Fühlen und Handeln eröffnen. Während des Trainings unterstütze ich Sie dabei, neue Perspektiven zu entwickeln, Ihre bereits vorhandenen Ressourcen zu erkennen und hilfreiche Gedanken und Verhaltensweisen zu trainieren.'
       ],

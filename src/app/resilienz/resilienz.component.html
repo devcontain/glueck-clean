@@ -10,45 +10,35 @@
     <div class="main-content-positon">
         <div class="main-context">
             <div class="text-container-wrapper">
-                @for (container of language.resilience.containers; track $index) {
-                @if ($index > 0) {
-                @if ($index === 4) {
-                <div class="philosophy-column">
-                    <article class="p-txt card-philosophy">
-                        @for (paragraph of container; track $index) {
-                        <p class="home-paragraph" [class.section-title]="$index === 0">
-                            {{ paragraph }}
-                        </p>
-                        }
-                    </article>
-                    <div class="philosophy-sunflower" aria-hidden="true">
-                        <img src="assets/img/sunflower_head.png" alt="">
-                    </div>
-                </div>
-                } @else {
-                <article class="p-txt" [class.card-intro]="$index === 1" [class.card-everyday]="$index === 2"
-                    [class.card-topics]="$index === 3" [class.card-philosophy]="$index === 4"
-                    [class.card-process]="$index === 5">
-                    @if ($index === 3) {
+                <app-sunflower-test class="resilience-background-sunflower stem-only" aria-hidden="true"></app-sunflower-test>
+
+                @for (container of language.resilience.containers; track container; let containerIndex = $index) {
+                @if (containerIndex > 0) {
+                <article class="p-txt timeline-card" [class.side-left]="containerIndex === 1 || containerIndex === 4 || containerIndex === 5"
+                    [class.side-right]="containerIndex === 2 || containerIndex === 3"
+                    [class.card-intro]="containerIndex === 1"
+                    [class.card-everyday]="containerIndex === 2" [class.card-topics]="containerIndex === 3"
+                    [class.card-philosophy]="containerIndex === 4" [class.card-process]="containerIndex === 5">
+                    @if (containerIndex === 3) {
                     <p class="home-paragraph section-title">
                         {{ container[0] }}
                     </p>
-                    <ul class="topic-list">
+                    <div class="topic-list">
                         @for (paragraph of container; track $index) {
                         @if ($index > 0) {
-                        <li>{{ paragraph }}</li>
+                        <p>{{ paragraph }}</p>
                         }
                         }
-                    </ul>
+                    </div>
                     } @else {
                     @for (paragraph of container; track $index) {
-                    <p class="home-paragraph" [class.section-title]="$index === 0">
+                    <p class="home-paragraph" [class.section-title]="$index === 0"
+                        [class.centered-paragraph]="containerIndex === 2 && $index > 1">
                         {{ paragraph }}
                     </p>
                     }
                     }
                 </article>
-                }
                 }
                 }
             </div>

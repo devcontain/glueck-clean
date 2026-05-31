@@ -6,13 +6,13 @@ section.main-section {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: $background-mainpage;
-    padding: $page-content 20px 72px;
+    padding: $page-content $layout-page-padding 72px;
     box-sizing: border-box;
 
     >div.main-content-positon {
-        width: 1500px;
+        width: $layout-max-width;
         max-width: 100%;
         padding: 20px;
         text-align: center;
@@ -75,7 +75,7 @@ p {
 
 @media (max-width: 600px) {
     section.main-section {
-        padding: 56px 12px 48px;
+        padding: 56px $layout-page-padding-mobile 48px;
 
         >div.main-content-positon {
             padding: 16px;

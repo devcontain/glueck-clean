@@ -1,7 +1,7 @@
 @use '../scss_global/global.style.scss' as *;
 
 section.bewegung-section {
-    --page-x-padding: 20px;
+    --page-x-padding: #{$layout-page-padding};
 
     display: flex;
     flex-direction: column;
@@ -10,12 +10,12 @@ section.bewegung-section {
     width: 100%;
     min-height: 100vh;
     background-color: $background-mainpage;
-    padding: $page-content 20px;
+    padding: $page-content $layout-page-padding;
     box-sizing: border-box;
 }
 
 .bewegung-content-positon {
-    width: 1500px;
+    width: $layout-max-width;
     max-width: 100%;
 }
 
@@ -115,10 +115,10 @@ h1 {
 
 @media (max-width: 600px) {
     section.bewegung-section {
-        --page-x-padding: 12px;
+        --page-x-padding: #{$layout-page-padding-mobile};
 
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: $layout-page-padding-mobile;
+        padding-right: $layout-page-padding-mobile;
     }
 
     .p-txt {

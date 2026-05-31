@@ -83,11 +83,11 @@ section {
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 1590px;
-    position: sticky;
-    top: 100px;
     z-index: 1;
+    padding-right: 64px;
+    padding-left: 64px;
 }
 
 button {
@@ -124,7 +124,6 @@ button:focus-visible app-yellow-arrow-left {
     }
 
     .back-button-pos {
-        top: 88px;
         width: calc(100% - 32px);
     }
 
@@ -154,7 +153,6 @@ button:focus-visible app-yellow-arrow-left {
     }
 
     .back-button-pos {
-        top: 72px;
         width: calc(100% - 24px);
     }
 

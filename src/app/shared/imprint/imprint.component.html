@@ -6,23 +6,29 @@
     </div>
 
     <div class="impressum">
-        <h1>Impressum</h1>
+        <h1>{{ language.imprint.title }}</h1>
 
-        <p>Max Mustermann<br>
-            Musterladen (Einzelunternehmer)<br>
-            Musterstra&szlig;e 111<br>
-            Geb&auml;ude 44<br>
-            90210 Musterstadt</p>
+        <p>
+            {{ language.imprint.addressName }}<br>
+            {{ language.imprint.businessName }}<br>
+            {{ language.imprint.addressStreet }}<br>
+            {{ language.imprint.addressCity }}
+        </p>
 
-        <h2>Kontakt</h2>
-        <p>Telefon: +49 (0) 123 44 55 66<br>
-            Telefax: +49 (0) 123 44 55 99<br>
-            E-Mail: mustermann&#64;musterfirma.de</p>
+        <h2>{{ language.imprint.contactTitle }}</h2>
+        <p>
+            {{ language.imprint.phoneLabel }} {{ language.imprint.phone }}<br>
+            {{ language.imprint.emailLabel }} {{ language.imprint.emailText }}
+        </p>
 
-        <h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
-        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-            teilzunehmen.</p>
+        <h2>{{ language.imprint.disputeResolutionTitle }}</h2>
+        <p>{{ language.imprint.disputeResolutionText }}</p>
 
-        <p>Quelle: <a href="https://www.e-recht24.de" target="_blank" rel="noopener">e-recht24.de</a></p>
+        <p>
+            {{ language.imprint.sourceLabel }}
+            <a [href]="language.imprint.sourceUrl" target="_blank" rel="noopener">
+                {{ language.imprint.sourceText }}
+            </a>
+        </p>
     </div>
 </section>

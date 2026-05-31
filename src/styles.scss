@@ -1,9 +1,9 @@
 @use './app/scss_global/global.style.scss' as *;
 
 @font-face {
-  font-family: "Casual Cursive";
+  font-family: "Dancing Script";
   src: url("#{$font-casual-cursive-src}") format("truetype");
-  font-weight: 400;
+  font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }

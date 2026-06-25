@@ -1,20 +1,11 @@
 @use '../../scss_global/global.style.scss' as *;
 
-html,
-body {
-  min-height: 100%;
-  overflow-x: hidden;
-  min-height: 100svh;
-  margin: 0px;
-}
-
 section {
   @include display(flex, null, null, row);
   @include position($h: auto);
   position: relative;
-/*   flex: 1 1 auto; */
   width: 100%;
-  padding: 32px 0 44px;
+  padding: 32px 0;
   background: $background-mainpage;
   color: $c-fg;
   overflow: hidden;
@@ -45,13 +36,13 @@ section {
     >div.place-logo {
       @include display(flex, flex-end, flex-start, column);
       flex: 1 1 0;
-      gap: 12px;
+      gap: 10px;
 
       >span {
         color: $sun;
         font-family: $ff-karla;
         font-size: 18px;
-        line-height: 19.2px;
+        line-height: 1.6;
         text-align: left;
       }
 
@@ -61,8 +52,9 @@ section {
     }
 
     >div.place-links {
-      @include display(flex, center, flex-end, column);
+      @include display(grid, null, null, null);
       flex: 1 1 0;
+      justify-items: end;
       gap: 10px;
 
       >div {
@@ -107,148 +99,66 @@ section {
   }
 }
 
-.footer-lavender {
-  position: absolute;
-  inset: auto 0 0;
-  z-index: 0;
-  pointer-events: none;
-  height: 112px;
-}
-
-.lavender {
-  position: absolute;
-  bottom: -12px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.86;
-}
-
-.lavender-1 {
-  left: 2%;
-  height: 100px;
-}
-
-.lavender-2 {
-  left: 15%;
-  height: 106px;
-}
-
-.lavender-3 {
-  left: 30%;
-  height: 94px;
-}
-
-.lavender-4 {
-  left: 50%;
-  height: 108px;
-  transform: translateX(-50%);
-}
-
-.lavender-5 {
-  right: 31%;
-  height: 98px;
-}
-
-.lavender-6 {
-  right: 15%;
-  height: 104px;
-}
-
-.lavender-7 {
-  right: 2%;
-  height: 96px;
-}
-
 @include respond(720px) {
   section {
-    height: auto;
-    min-height: 0;
-    padding: 24px 0 54px;
+    padding: 24px 0;
 
-    >div {
-      @include display(flex, space-around, center, column);
+    >div:not(.footer-lavender) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: start;
       width: calc(100% - #{$layout-page-padding-mobile * 2});
-      gap: 18px;
+      gap: 18px 20px;
       padding-bottom: 0;
 
       >.footer-credit {
         position: static;
-        width: auto;
-        height: auto;
-        order: 3;
+        grid-column: 1 / -1;
+        justify-self: center;
       }
 
       >div.place-logo,
       >div.place-links {
         width: 100%;
         flex: none;
-        align-items: center;
       }
 
       >div.place-logo {
+        grid-column: 1;
+        grid-row: 1;
+        align-items: flex-start;
+
         >span {
-          text-align: center;
+          text-align: left;
         }
       }
 
       >div.place-links {
+        grid-column: 2;
+        grid-row: 1;
+        align-items: flex-end;
+
         >div {
           width: 100%;
-          justify-content: center;
+          justify-content: flex-end;
         }
       }
     }
   }
 
-  .footer-lavender {
-    height: 86px;
-  }
-
-  .lavender-1 {
-    left: -2%;
-    height: 72px;
-  }
-
-  .lavender-2 {
-    left: 12%;
-    height: 78px;
-  }
-
-  .lavender-3 {
-    left: 27%;
-    height: 68px;
-  }
-
-  .lavender-4 {
-    height: 80px;
-  }
-
-  .lavender-5 {
-    right: 27%;
-    height: 70px;
-  }
-
-  .lavender-6 {
-    right: 12%;
-    height: 76px;
-  }
-
-  .lavender-7 {
-    right: -2%;
-    height: 70px;
-  }
 }
 
 @include respond(500px) {
   section {
-    >div {
+    >div:not(.footer-lavender) {
       gap: 14px;
 
       >div.place-links {
         >div {
           >a {
             width: auto;
-            justify-content: center;
+            min-width: 0;
+            justify-content: flex-end;
           }
         }
       }

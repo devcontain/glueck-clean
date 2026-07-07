@@ -15,6 +15,10 @@ export class HeaderComponent {
     private router: Router,
   ) { }
 
+  closeMenu(menuToggle: HTMLInputElement): void {
+    menuToggle.checked = false;
+  }
+
   back(): void {
     this.router.navigate(['/'], { replaceUrl: true }).then(() => {
       setTimeout(() => {

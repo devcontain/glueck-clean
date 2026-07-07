@@ -7,7 +7,12 @@
     <div class="p-txt first-container">
         @for (paragraph of language.home.containers[0]; track $index) {
         <p class="first-paragraph">
+            @if (paragraph.includes('(')) {
+            {{ paragraph.slice(0, paragraph.indexOf('(')) }}
+            <span class="first-paragraph-source">{{ paragraph.slice(paragraph.indexOf('(')) }}</span>
+            } @else {
             {{ paragraph }}
+            }
         </p>
         }
     </div>

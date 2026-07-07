@@ -3,7 +3,10 @@
 
     @if (language.resilience.containers.length > 0) {
     <p class="hero-quote">
-        {{ language.resilience.containers[0][0] }}
+        {{ language.resilience.containers[0][0].slice(0, language.resilience.containers[0][0].indexOf('(')) }}
+        <span class="hero-quote-source">
+            {{ language.resilience.containers[0][0].slice(language.resilience.containers[0][0].indexOf('(')) }}
+        </span>
     </p>
     }
 

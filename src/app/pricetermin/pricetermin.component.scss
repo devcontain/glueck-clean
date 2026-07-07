@@ -114,7 +114,11 @@ h1 {
 
 .process-line {
     padding-left: 10px;
-    border-left: 3px solid rgba(145, 163, 99, 0.35);
+}
+
+.text-block:has(.process-line) .block-title {
+    font-size: 46px;
+    line-height: 1.6;
 }
 
 @media (max-width: 900px) {
@@ -124,6 +128,10 @@ h1 {
     }
 
     h1 {
+        font-size: 34px;
+    }
+
+    .text-block:has(.process-line) .block-title {
         font-size: 34px;
     }
 }
@@ -144,6 +152,10 @@ h1 {
 
     .block-title {
         font-size: 20px;
+    }
+
+    .text-block:has(.process-line) .block-title {
+        font-size: 28px;
     }
 
     .schedule-table th,

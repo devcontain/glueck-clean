@@ -17,6 +17,17 @@
                     </p>
                     }
                 </div>
+                <div class="main-context training-context">
+                    <h2>{{ language.aboutme.trainingTitle }}</h2>
+                    <div class="training-list">
+                        @for (training of language.aboutme.trainings; track $index) {
+                        <div class="training-row">
+                            <span class="training-year">{{ training.year }}</span>
+                            <span>{{ training.text }}</span>
+                        </div>
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     </div>

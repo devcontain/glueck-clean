@@ -8,34 +8,35 @@
             </button>
         </div>
 
-        <input class="checkbox" type="checkbox" id="toggle_button">
+        <input #menuToggle class="checkbox" type="checkbox" id="toggle_button">
         <label for="toggle_button" class="close_menu" aria-hidden="true"></label>
 
         <div class="menu">
 
             <nav>
 
-                <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+                <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+                    (click)="closeMenu(menuToggle)">
                     Home
                 </a>
 
-                <a routerLink="/ueber-mich" routerLinkActive="active-link">
+                <a routerLink="/ueber-mich" routerLinkActive="active-link" (click)="closeMenu(menuToggle)">
                     Über mich
                 </a>
 
-                <a routerLink="/zenbo-balance" routerLinkActive="active-link">
+                <a routerLink="/zenbo-balance" routerLinkActive="active-link" (click)="closeMenu(menuToggle)">
                     ZENbo®Balance
                 </a>
 
-                <a routerLink="/resilienz-training" routerLinkActive="active-link">
+                <a routerLink="/resilienz-training" routerLinkActive="active-link" (click)="closeMenu(menuToggle)">
                     Resilienz-Training
                 </a>
 
-                <a routerLink="/kontakt" routerLinkActive="active-link">
+                <a routerLink="/kontakt" routerLinkActive="active-link" (click)="closeMenu(menuToggle)">
                     Kontakt
                 </a>
 
-                <a routerLink="/prices" routerLinkActive="active-link">
+                <a routerLink="/prices" routerLinkActive="active-link" (click)="closeMenu(menuToggle)">
                     Preise & Termine
                 </a>
 

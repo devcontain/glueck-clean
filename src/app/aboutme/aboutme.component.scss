@@ -27,6 +27,15 @@ h1 {
     text-align: left;
 }
 
+h2 {
+    margin: 0;
+    color: $header-colors;
+    font-family: $ff-open-sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
 .main-content-positon {
     display: grid;
     grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
@@ -80,6 +89,31 @@ h1 {
     line-height: 1.7;
 }
 
+.training-context {
+    margin-top: 24px;
+}
+
+.training-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.training-row {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 12px;
+    color: $text-main;
+    font-family: $ff-open-sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.training-year {
+    white-space: nowrap;
+}
+
 @media (max-width: 1000px) {
     section.main-section {
         padding-top: 72px;
@@ -124,6 +158,17 @@ h1 {
 
     .home-paragraph {
         font-size: 16px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .training-row {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 10px;
+        font-size: 16px;
+        line-height: 1.6;
     }
 
     h1 {

@@ -26,8 +26,8 @@
                 </div>
                 } @else {
                 @for (paragraph of block.paragraphs; track paragraph; let paragraphIndex = $index) {
-                <p class="home-paragraph" [class.block-title]="paragraphIndex === 0"
-                    [class.price-line]="block.type === 'prices' && paragraphIndex > 0"
+                <p class="home-paragraph"
+                    [class.block-title]="paragraphIndex === 0 && (block.type === 'notice' || block.type === 'process')"
                     [class.process-line]="block.type === 'process' && paragraphIndex > 0">
                     {{ paragraph }}
                 </p>

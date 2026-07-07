@@ -18,7 +18,8 @@ export class LanguageService {
         'Glück hat eine positive Wirkung auf Geist, Seele und Körper. Und wer sich dauerhaft unglücklich fühlt, wird schwer an seinem Leben zu tragen haben. Wer sich aber nachhaltig glücklich fühlt, wird aufrecht durchs Leben gehen. Untersuchungen zeigen: Je glücklicher wir sind, desto besser ist unser Selbstwertgefühl, desto wertvoller empfinden wir unsere Beziehungen, desto engagierter sind wir im Beruf und desto mehr sind wir am Ende eines Tages mit uns selbst zufrieden.'
       ],
       [
-        'Mit dem Glück ist es wie mit vielen Dingen im Leben: Übung macht den Meister. Lassen Sie uns starten und Ihr persönliches Glückskarussell ankurbeln.'
+        'Mit dem Glück ist es wie mit vielen Dingen im Leben: Übung macht den Meister.',
+        'Lassen Sie uns starten und Ihr persönliches Glückskarussell ankurbeln.'
       ]
     ]
   };
@@ -46,13 +47,23 @@ export class LanguageService {
   private readonly aboutMeDe = {
     titel: 'ÜBER MICH',
     paragraphs: [
-      'Geboren wurde ich 1971 in Berlin.',
-      'Nach meiner Ausbildung zur Fachwirtin für Tourismus bin ich für sechs Jahre als Reiseleiterin ins Ausland gegangen. Mittlerweile habe ich meinen Lebensmittelpunkt in Salzwedel gefunden.',
-      'Durch meine Arbeit im Tourismus hatte ich täglich mit vielen Menschen zu tun. Da mich Menschen und ihr Tun schon immer fasziniert haben, habe ich eines Tages beschlossen, ein Fernstudium zu den Grundlagen der Psychologie (SGD) zu absolvieren. Daran angeschlossen haben sich der Studiengang Angst- und Stressbewältigung (SGD) sowie eine Ausbildung zur Psychologischen Beraterin (ALH).',
-      'Zunehmend ist mir jedoch aufgefallen, dass Menschen ihren Blick immer mehr auf die negativen Dinge richten und dadurch immer unzufriedener werden. Aus diesem Grund habe ich mich entschieden, mich der Positiven Psychologie zuzuwenden. Ich absolvierte eine Ausbildung zur Happiness-Trainerin (ALH) und zur Resilienztrainerin. Dabei habe ich gelernt, dass Glück mit relativ einfachen Methoden trainierbar ist, das persönliche Glückspotenzial gesteigert werden kann und ein Perspektivwechsel weg vom Negativen hin zum Positiven einen direkten Einfluss auf unser Wohlbefinden hat.',
-      'Da nur in einem gesunden Körper auch ein gesunder Geist wohnen kann, habe ich meinen Weg mit einer Ausbildung zur Zenbo-Balance-Trainerin abgerundet.',
-      'Um mein Wissen zu erweitern, schlossen sich außerdem Ausbildungen zur Kursleiterin für Beckenbodengymnastik, zur Entspannungstrainerin und zur Brainfit-Trainerin an.',
-      'Außerdem bin ich in den 2. Usui-Reiki-Grad eingeweiht.'
+      'Ich wurde 1971 in Berlin geboren. Nach meiner Ausbildung zur Fachwirtin für Tourismus war ich sechs Jahre als Reiseleiterin im Ausland tätig, bevor ich meinen Lebensmittelpunkt in Salzwedel fand.',
+      'Durch meine langjährige Arbeit im Tourismus stand ich täglich im Austausch mit vielen unterschiedlichen Menschen. Da mich das menschliche Verhalten und Erleben schon immer fasziniert hat, begann ich, mich intensiv mit psychologischen Themen zu beschäftigen und mich in diesem Bereich weiterzubilden.',
+      'Im Laufe der Zeit wurde mir zunehmend bewusst, wie stark sich viele Menschen auf negative Aspekte konzentrieren und dadurch an Zufriedenheit verlieren. Aus diesem Grund habe ich meinen Schwerpunkt auf die Positive Psychologie gelegt. Dabei habe ich gelernt, dass sich das individuelle Wohlbefinden und das persönliche Glück aktiv fördern und trainieren lassen und ein bewusster Perspektivwechsel einen großen Einfluss darauf hat.',
+      'Ergänzend dazu habe ich mich auch mit Themen rund um Entspannung, mentale Stärke und körperliches Wohlbefinden beschäftigt. Denn ich bin überzeugt, dass ein gesunder Geist eng mit einem gesunden Körper verbunden ist.'
+    ],
+    trainingTitle: 'Meine Ausbildungen',
+    trainings: [
+      { year: '2013', text: 'Weiterbildung praktische Psychologie' },
+      { year: '2016', text: 'Weiterbildung Angst- und Stressbewältigung' },
+      { year: '2017', text: 'Psychologische Beraterin' },
+      { year: '2018', text: 'Resilienz Trainerin' },
+      { year: '2018', text: 'Happiness Trainerin' },
+      { year: '2019', text: 'ZENbo Balance Trainerin' },
+      { year: '2019', text: 'Anatomie & Physiologie - Grundlagen der Bewegung' },
+      { year: '2020', text: 'Entspannungstrainerin' },
+      { year: '2020', text: 'Beckenbodentrainerin' },
+      { year: '2021', text: 'BrainFit Trainerin' }
     ]
   };
 
@@ -126,7 +137,8 @@ export class LanguageService {
         'Auch als Geschenkgutschein – auch für einzelne Stunden – erhältlich.'
       ],
       [
-        'Termine in der Gruppe (max. 8 Teilnehmer*innen). Ein Einstieg ist jederzeit möglich. Die Kosten für einen 8-Wochen-Kurs liegen bei 85 €. Das Kurs-Ticket ist 9 Wochen gültig.'
+        'Termine in der Gruppe (max. 8 Teilnehmer*innen). Ein Einstieg ist jederzeit möglich. Die Kosten für einen 8-Wochen-Kurs liegen bei 85€.',
+        'Das Kurs-Ticket ist 9 Wochen gültig.'
       ],
       [
         'Montags: 18:00 - 19:00 Uhr',
@@ -140,10 +152,10 @@ export class LanguageService {
       ],
       [
         'Wichtiger Hinweis',
-        'Mein Angebot kann nicht mit den Krankenkassen abgerechnet werden, da es außerhalb des gesetzlichen Leistungskataloges der Krankenkassen liegt.',
-        'Beratung'
+        'Mein Angebot kann nicht mit den Krankenkassen abgerechnet werden, da es außerhalb des gesetzlichen Leistungskataloges der Krankenkassen liegt.'
       ],
       [
+        'Beratung',
         '1. Ihre Anmeldung: Sie kontaktieren mich per Mail oder telefonisch und wir vereinbaren einen Termin für das Erstgespräch.',
         '2. Ihr Erstgespräch: Ein kurzes, kostenfreies Erstgespräch erlaubt uns ein gegenseitiges Kennenlernen und ermöglicht mir, ein Gespür für Ihr Anliegen zu bekommen. Damit eine Beratung erfolgreich ist, ist es entscheidend, dass Sie sich gut aufgehoben fühlen. So können Sie über eine weitere Zusammenarbeit entscheiden und wir haben die Möglichkeit, konkrete Vereinbarungen zu treffen.',
         '3. Ihr Folgetermin / Ihre Folgetermine (45 Minuten – 50 €): Sie haben sich für eine Beratung bei mir entschieden. Nun vereinbaren wir weitere Termine und schaffen damit eine Voraussetzung für eine konstruktive und zielorientierte Arbeit. Zu jeder Zeit gilt: Sie sind kein Patient, sondern bestimmen jederzeit selbst über Ihre Ziel- und Veränderungswünsche.'

@@ -3,7 +3,10 @@
 
     @if (language.bewegung.containers.length > 0) {
     <p class="hero-quote quote-highlight">
-        {{ language.bewegung.containers[0][0] }}
+        {{ language.bewegung.containers[0][0].slice(0, language.bewegung.containers[0][0].indexOf('(')) }}
+        <span class="hero-quote-source">
+            {{ language.bewegung.containers[0][0].slice(language.bewegung.containers[0][0].indexOf('(')) }}
+        </span>
     </p>
     }
 

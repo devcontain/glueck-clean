@@ -1,7 +1,5 @@
 @use '../scss_global/global.style.scss' as *;
 
-$resilience-card-width: 760px;
-
 section.main-section {
     display: flex;
     justify-content: center;
@@ -48,11 +46,19 @@ h1 {
     text-align: center;
 }
 
+.hero-quote-source {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.76em;
+    line-height: 1.2;
+}
+
 .text-container-wrapper {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 28px;
     padding: 12px 0 28px;
     overflow: hidden;
@@ -74,19 +80,8 @@ h1 {
 .timeline-card {
     position: relative;
     z-index: 1;
-    width: min($resilience-card-width, 62%);
-}
-
-.timeline-card+.timeline-card {
-    margin-top: -96px;
-}
-
-.side-left {
-    align-self: flex-start;
-}
-
-.side-right {
-    align-self: flex-end;
+    width: 100%;
+    align-self: center;
 }
 
 .card-intro {
@@ -168,16 +163,7 @@ h1 {
 @media (max-width: 1500px) {
     .timeline-card {
         width: 100%;
-        align-self: stretch;
-    }
-
-    .timeline-card+.timeline-card {
-        margin-top: 0;
-    }
-
-    .side-left,
-    .side-right {
-        align-self: stretch;
+        align-self: center;
     }
 
     .resilience-background-sunflower {
@@ -196,7 +182,6 @@ h1 {
 
     .text-container-wrapper {
         gap: 24px;
-        padding-left: 48px;
     }
 
     .resilience-background-sunflower {
@@ -230,7 +215,7 @@ h1 {
     }
 
     .text-container-wrapper {
-        padding-left: 38px;
+        padding-left: 0;
     }
 
     .resilience-background-sunflower {

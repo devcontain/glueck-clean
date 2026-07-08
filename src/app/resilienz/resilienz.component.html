@@ -33,6 +33,62 @@
                         }
                         }
                     </div>
+                    } @else if (containerIndex === 2) {
+                    <div class="everyday-hero">
+                        <div class="everyday-hero-copy">
+                            <h2>Was gibt uns Halt?</h2>
+                            <span></span>
+                            <p>Über Schutz, Gleichgewicht und die Kraft, sich an das Leben anzupassen.</p>
+                        </div>
+                    </div>
+                    <div class="everyday-intro">
+                        <div class="everyday-heart" aria-hidden="true">♡</div>
+                        <p class="home-paragraph section-title">
+                            {{ container[0] }}
+                        </p>
+                        <p class="everyday-intro-text">
+                            Wir alle stehen im Leben vor Herausforderungen. Doch es gibt fünf grundlegende Bedürfnisse,
+                            die uns Halt geben - wie ein guter Regenschirm. Wenn wir sie kennen und stärken, können wir
+                            gelassener durchs Leben gehen.
+                        </p>
+                    </div>
+                    <div class="everyday-grid">
+                        <div class="everyday-item">
+                            <div class="umbrella-icon" aria-hidden="true"></div>
+                            <div>
+                                <h3>Gleichgewicht</h3>
+                                <p>Wir halten unser Gleichgewicht, wenn wir für eine gewisse Zeit nur auf einem Bein stehen - mit dem Regenschirm können wir das Gleichgewicht halten.</p>
+                            </div>
+                        </div>
+                        <div class="everyday-item">
+                            <div class="umbrella-icon" aria-hidden="true"></div>
+                            <div>
+                                <h3>Schutz</h3>
+                                <p>Wir fühlen uns resilient, weil wir die Kraft haben, auch anderen Schutz zu bieten.</p>
+                            </div>
+                        </div>
+                        <div class="everyday-item">
+                            <div class="umbrella-icon" aria-hidden="true"></div>
+                            <div>
+                                <h3>Sicherheit</h3>
+                                <p>Wir wissen, dass wir jederzeit einen Schirm benutzen können, und das gibt uns ein Gefühl von Sicherheit.</p>
+                            </div>
+                        </div>
+                        <div class="everyday-item">
+                            <div class="umbrella-icon" aria-hidden="true"></div>
+                            <div>
+                                <h3>Anpassung</h3>
+                                <p>Wir können uns mithilfe des passenden Schirms jederzeit den Gegebenheiten anpassen.</p>
+                            </div>
+                        </div>
+                        <div class="everyday-item everyday-item-wide">
+                            <div class="umbrella-icon" aria-hidden="true"></div>
+                            <div>
+                                <h3>Nähe</h3>
+                                <p>Wir können uns dort schützen, wo wir es gerade benötigen - und dadurch echte Nähe ermöglichen.</p>
+                            </div>
+                        </div>
+                    </div>
                     } @else {
                     @for (paragraph of container; track $index) {
                     <p class="home-paragraph" [class.section-title]="$index === 0"

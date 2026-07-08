@@ -23,7 +23,7 @@ section {
       @include display(flex, center, center, column);
       @include position($p: absolute);
       gap: 4px;
-      color: $footer-hover;
+      color: $nav-menu-color;
       font-family: $ff-fira;
       line-height: 1.4;
       text-align: center;

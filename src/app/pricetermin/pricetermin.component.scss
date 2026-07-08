@@ -114,11 +114,17 @@ h1 {
 
 .process-line {
     padding-left: 10px;
+    text-align: left;
+}
+
+.text-block:has(.process-line) {
+    text-align: left;
 }
 
 .text-block:has(.process-line) .block-title {
     font-size: 46px;
     line-height: 1.6;
+    text-align: center;
 }
 
 @media (max-width: 900px) {

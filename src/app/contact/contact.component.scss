@@ -44,7 +44,7 @@ p {
 }
 
 .intro-line {
-    color: $earth-warm;
+    color: #000;
 }
 
 .person-line {
@@ -59,8 +59,128 @@ p {
     color: $header-colors;
 }
 
+.contact-action-link {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    color: $header-colors;
+    transition: color 0.3s ease;
+}
+
+.contact-action-link:hover,
+.contact-action-link:focus-visible {
+    color: $nav-menu-color;
+}
+
+.contact-hover-flower {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    visibility: hidden;
+}
+
+.contact-action-link:hover .contact-hover-flower,
+.contact-action-link:focus-visible .contact-hover-flower {
+    visibility: visible;
+}
+
 .note-line {
     margin-top: 6px;
+}
+
+.email-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.22);
+    z-index: 1000;
+}
+
+.email-dialog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: min(460px, 100%);
+    padding: 28px 24px 24px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    color: $nav-menu-color;
+    box-sizing: border-box;
+}
+
+.email-dialog-close {
+    all: unset;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    cursor: pointer;
+    color: $nav-menu-color;
+    font-family: $ff-open-sans;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.email-dialog-text {
+    max-width: 360px;
+    color: $nav-menu-color;
+    font-size: 20px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.email-copy-confirmation {
+    animation: email-copy-confirmation 1.5s ease-in-out forwards;
+}
+
+.email-dialog-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.email-dialog-actions button {
+    all: unset;
+    cursor: pointer;
+    color: $nav-menu-color;
+    font-family: $ff-open-sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.email-dialog-close:hover,
+.email-dialog-close:focus-visible,
+.email-dialog-actions button:hover,
+.email-dialog-actions button:focus-visible {
+    color: $nav-hover-color;
+}
+
+@keyframes email-copy-confirmation {
+    0% {
+        opacity: 0;
+    }
+
+    18%,
+    82% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 900px) {
@@ -97,6 +217,16 @@ p {
     }
 
     .contact-line {
+        font-size: 18px;
+    }
+
+    .email-dialog {
+        gap: 18px;
+        padding: 26px 20px 22px;
+    }
+
+    .email-dialog-text,
+    .email-dialog-actions button {
         font-size: 18px;
     }
 }

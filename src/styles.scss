@@ -50,6 +50,17 @@ body {
   overflow-x: hidden;
 }
 
+html.email-dialog-open,
+body.email-dialog-open {
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+html.email-dialog-open::-webkit-scrollbar,
+body.email-dialog-open::-webkit-scrollbar {
+  display: none;
+}
+
 p,
 h1,
 h2,

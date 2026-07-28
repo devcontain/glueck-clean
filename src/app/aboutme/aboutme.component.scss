@@ -40,7 +40,7 @@ h2 {
     display: grid;
     grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
     gap: 24px;
-    align-items: stretch;
+    align-items: start;
 }
 
 .photo-placeholder,
@@ -53,23 +53,17 @@ h2 {
 
 .photo-placeholder {
     padding: 20px;
-    height: 332px;
+    align-self: start;
 }
 
-.photo-placeholder-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-    height: 100%;
+.about-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
     border-radius: 8px;
-    border: 2px dashed rgba(145, 163, 99, 0.5);
-    background: linear-gradient(180deg, #f2e9d8 0%, #e8dcc5 100%);
-    color: $header-colors;
-    font-family: $ff-open-sans;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    object-fit: contain;
+    object-position: center;
 }
 
 .main-context {
@@ -124,9 +118,6 @@ h2 {
         grid-template-columns: 1fr;
     }
 
-    .photo-placeholder {
-        min-height: 320px;
-    }
 }
 
 @media (max-width: 900px) {
@@ -146,14 +137,6 @@ h2 {
     .photo-placeholder,
     .main-context {
         padding: 16px;
-    }
-
-    .photo-placeholder {
-        min-height: 240px;
-    }
-
-    .photo-placeholder-inner {
-        font-size: 22px;
     }
 
     .home-paragraph {
@@ -186,7 +169,4 @@ h2 {
         padding: 14px;
     }
 
-    .photo-placeholder {
-        min-height: 220px;
-    }
 }

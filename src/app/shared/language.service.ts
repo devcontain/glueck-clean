@@ -63,7 +63,8 @@ export class LanguageService {
       { year: '2019', text: 'Anatomie & Physiologie - Grundlagen der Bewegung' },
       { year: '2020', text: 'Entspannungstrainerin' },
       { year: '2020', text: 'Beckenbodentrainerin' },
-      { year: '2021', text: 'BrainFit Trainerin' }
+      { year: '2021', text: 'BrainFit Trainerin' },
+      { year: '2026', text: 'Rückenkursleiterin' }
     ]
   };
 
@@ -283,6 +284,9 @@ export class LanguageService {
 
     disputeResolutionTitle: 'Verbraucherstreitbeilegung/Universalschlichtungsstelle',
     disputeResolutionText: 'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+
+    imageCreditsTitle: 'Bildnachweise',
+    imageCreditsText: 'KI-generierte Illustration: ChatGPT / OpenAI',
 
     sourceLabel: 'Quelle:',
     sourceText: 'e-recht24.de',

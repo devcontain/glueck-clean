@@ -1,5 +1,11 @@
 <section class="bewegung-section fade-page">
-    <h1>{{ language.bewegung.titel }}</h1>
+    <h1>
+        <span class="title-main">{{ titleMain }}</span>
+        <span class="title-suffix">
+            <span class="title-separator">–</span>
+            <span class="title-brand">{{ titleBrand }}</span>
+        </span>
+    </h1>
 
     @if (language.bewegung.containers.length > 0) {
     <p class="hero-quote quote-highlight">

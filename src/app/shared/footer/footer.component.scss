@@ -99,6 +99,19 @@ section {
   }
 }
 
+@media (max-width: 1200px) {
+  section {
+    >div:not(.footer-lavender) {
+      >div.place-logo {
+        .footer-training-break {
+          display: block;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
 @include respond(720px) {
   section {
     padding: 24px 0;

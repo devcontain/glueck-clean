@@ -10,4 +10,12 @@ import { LanguageService } from '../shared/language.service';
 })
 export class ZenboComponent {
   constructor(public language: LanguageService) { }
+
+  get titleMain(): string {
+    return this.language.bewegung.titel.split(' – ')[0];
+  }
+
+  get titleBrand(): string {
+    return this.language.bewegung.titel.split(' – ')[1];
+  }
 }

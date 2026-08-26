@@ -73,6 +73,10 @@ section {
           line-height: 1.6;
           transition: color 0.4s ease;
 
+          &.footer-link-legal {
+            font-size: 17px;
+          }
+
           >img.green-point {
             @include position($h: 16px, $w: 16px);
             object-fit: contain;
@@ -112,22 +116,19 @@ section {
   }
 }
 
-@include respond(720px) {
+@include respond(850px) {
   section {
     padding: 24px 0;
 
     >div:not(.footer-lavender) {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      align-items: start;
+      @include display(flex, center, center, column);
       width: calc(100% - #{$layout-page-padding-mobile * 2});
-      gap: 18px 20px;
+      gap: 18px;
       padding-bottom: 0;
 
       >.footer-credit {
         position: static;
-        grid-column: 1 / -1;
-        justify-self: center;
+        order: 3;
       }
 
       >div.place-logo,
@@ -137,23 +138,21 @@ section {
       }
 
       >div.place-logo {
-        grid-column: 1;
-        grid-row: 1;
-        align-items: flex-start;
+        order: 1;
+        align-items: center;
 
         >span {
-          text-align: left;
+          text-align: center;
         }
       }
 
       >div.place-links {
-        grid-column: 2;
-        grid-row: 1;
-        align-items: flex-end;
+        order: 2;
+        justify-items: center;
 
         >div {
           width: 100%;
-          justify-content: flex-end;
+          justify-content: center;
         }
       }
     }
